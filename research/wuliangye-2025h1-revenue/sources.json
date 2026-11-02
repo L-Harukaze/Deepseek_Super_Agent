@@ -23,7 +23,7 @@
   "page_numbering": {
     "pdf_pages_total": 126,
     "printed_page_equals_pdf_page": true,
-    "verification_method": "抽查第 1、2、6、12、16、36、38 页页眉/页脚印刷页码与 PDF 页序，逐一对应",
+    "verification_method": "抽查第 2—7、12、16、36、38、100、126 页页眉印刷页码与 PDF 页序，均逐一对应",
     "note": "封面为 PDF 第 1 页、无印刷页码；PDF 第 2 页起印刷页码与 PDF 页序一致"
   },
   "pages_used": [
