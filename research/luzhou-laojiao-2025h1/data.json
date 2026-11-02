@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "泸州老窖 2025 年半年度财务速览",
+    "purpose": "研究底稿：三项核心财务指标的原始金额、亿元显示值与同比，便于独立核对",
+    "prepared_at": "2026-11-02T23:55:23+08:00",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "display_unit": "亿元",
+    "rounding": "四舍五入保留两位小数；同比按原始金额全精度计算后再舍入，不使用亿元显示值反算",
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）"
+  },
+  "company": {
+    "name": "泸州老窖股份有限公司",
+    "short_name": "泸州老窖",
+    "stock_code": "000568",
+    "exchange": "深圳证券交易所"
+  },
+  "report": {
+    "title": "泸州老窖股份有限公司 2025 年半年度报告全文",
+    "report_type": "半年度报告",
+    "audited": false,
+    "period": "2025 年半年度（2025-01-01 至 2025-06-30）",
+    "comparative_period": "2024 年半年度（2024-01-01 至 2024-06-30）",
+    "disclosure_date": "2025-08-30",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-08-30/1224618711.PDF",
+    "pdf_sha256": "f423c830835b03b46714e1f8ab1d114141d8408b2526e803ee6baa096d6cdfbc",
+    "pdf_pages": 147,
+    "printed_page_equals_pdf_page": true
+  },
+  "formulas": {
+    "display_yi": "原始金额（元）÷ 100,000,000",
+    "yoy_percent": "（本期原始金额 − 上年同期原始金额）÷ 上年同期原始金额 × 100%",
+    "example": {
+      "metric": "营业收入",
+      "calculation": "(16453732904.65 − 16904885169.38) ÷ 16904885169.38 × 100% = -2.6687685849956375%，舍入为 -2.67%"
+    }
+  },
+  "metrics": [
+    {
+      "id": "revenue",
+      "name": "营业收入",
+      "current": {
+        "period": "2025 年半年度",
+        "raw_cny": "16453732904.65",
+        "yi": 164.54
+      },
+      "prior_year_same_period": {
+        "period": "2024 年半年度",
+        "raw_cny": "16904885169.38",
+        "yi": 169.05
+      },
+      "change_raw_cny": "-451152264.73",
+      "yoy_percent": -2.67,
+      "report_stated_yoy_percent": -2.67,
+      "source": {
+        "summary_table": {
+          "pdf_page": 7,
+          "printed_page": 7,
+          "table": "四、主要会计数据和财务指标"
+        },
+        "financial_statement": {
+          "statement": "合并利润表",
+          "pdf_page": 47,
+          "printed_page": 47
+        }
+      }
+    },
+    {
+      "id": "net_profit_attributable_to_parent",
+      "name": "归属于上市公司股东的净利润",
+      "current": {
+        "period": "2025 年半年度",
+        "raw_cny": "7662907812.98",
+        "yi": 76.63
+      },
+      "prior_year_same_period": {
+        "period": "2024 年半年度",
+        "raw_cny": "8027538165.31",
+        "yi": 80.28
+      },
+      "change_raw_cny": "-364630352.33",
+      "yoy_percent": -4.54,
+      "report_stated_yoy_percent": -4.54,
+      "source": {
+        "summary_table": {
+          "pdf_page": 7,
+          "printed_page": 7,
+          "table": "四、主要会计数据和财务指标"
+        },
+        "financial_statement": {
+          "statement": "合并利润表（归属于母公司股东的净利润）",
+          "pdf_page": 48,
+          "printed_page": 48
+        }
+      }
+    },
+    {
+      "id": "net_cash_flow_from_operating_activities",
+      "name": "经营活动产生的现金流量净额",
+      "current": {
+        "period": "2025 年半年度",
+        "raw_cny": "6064470030.15",
+        "yi": 60.64
+      },
+      "prior_year_same_period": {
+        "period": "2024 年半年度",
+        "raw_cny": "8225060212.57",
+        "yi": 82.25
+      },
+      "change_raw_cny": "-2160590182.42",
+      "yoy_percent": -26.27,
+      "report_stated_yoy_percent": -26.27,
+      "source": {
+        "summary_table": {
+          "pdf_page": 7,
+          "printed_page": 7,
+          "table": "四、主要会计数据和财务指标"
+        },
+        "financial_statement": {
+          "statement": "合并现金流量表",
+          "pdf_page": 50,
+          "printed_page": 50
+        }
+      }
+    }
+  ],
+  "verification": {
+    "cross_checked": "三项指标金额在主表（PDF 第 7 页）与合并利润表（第 47—48 页）、合并现金流量表（第 50 页）中一致",
+    "yoy_recalculated_from_raw": true,
+    "comparative_figures_restated": false,
+    "comparative_restatement_note": "报告第 7 页：公司无需追溯调整或重述以前年度会计数据",
+    "other_notes": [
+      "归母净利润不等于合并利润表净利润总额 7,683,660,159.62 元（第 48 页）",
+      "营业收入与营业总收入金额相同（第 47 页）",
+      "半年度财务报告未经审计（第 42 页）"
+    ]
+  }
+}
