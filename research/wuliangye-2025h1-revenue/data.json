@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "五粮液 2025 年半年度营业收入核对",
+    "purpose": "研究底稿：营业收入与营业总收入的原始金额、亿元显示值与同比，便于独立核对",
+    "prepared_at": "2026-11-03T02:49:10+08:00",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "display_unit": "亿元",
+    "rounding": "四舍五入保留两位小数；同比按原始金额全精度计算后再舍入，不使用亿元显示值反算",
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）"
+  },
+  "company": {
+    "name": "宜宾五粮液股份有限公司",
+    "short_name": "五粮液",
+    "stock_code": "000858",
+    "exchange": "深圳证券交易所"
+  },
+  "report": {
+    "title": "宜宾五粮液股份有限公司 2025 年半年度报告全文",
+    "report_type": "半年度报告",
+    "audited": false,
+    "period": "2025 年半年度（2025-01-01 至 2025-06-30）",
+    "comparative_period": "2024 年半年度（2024-01-01 至 2024-06-30）",
+    "disclosure_date": "2025-08-28",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-08-28/1224596951.PDF",
+    "pdf_sha256": "e460cfeaac9388f493dcafc14f4f5a6f83521f24a5ad3d3dd8a447cb437d755a",
+    "pdf_pages": 126,
+    "printed_page_equals_pdf_page": true
+  },
+  "formulas": {
+    "display_yi": "原始金额（元）÷ 100,000,000",
+    "yoy_percent": "（本期原始金额 − 上年同期原始金额）÷ 上年同期原始金额 × 100%",
+    "example": {
+      "metric": "营业收入",
+      "calculation": "(52770984383.52 − 50648026578.65) ÷ 50648026578.65 × 100% = 4.191590370403305198…%，舍入为 4.19%"
+    }
+  },
+  "metrics": [
+    {
+      "id": "revenue",
+      "name": "营业收入",
+      "current": {
+        "period": "2025 年半年度",
+        "raw_cny": "52770984383.52",
+        "yi": 527.71
+      },
+      "prior_year_same_period": {
+        "period": "2024 年半年度",
+        "raw_cny": "50648026578.65",
+        "yi": 506.48
+      },
+      "change_raw_cny": "2122957804.87",
+      "change_yi": 21.23,
+      "yoy_percent": 4.19,
+      "report_stated_yoy_percent": 4.19,
+      "sources": [
+        {
+          "pdf_page": 6,
+          "printed_page": 6,
+          "table": "四、主要会计数据和财务指标"
+        },
+        {
+          "pdf_page": 12,
+          "printed_page": 12,
+          "table": "三、主营业务分析 2、营业收入构成（营业收入合计）"
+        },
+        {
+          "pdf_page": 36,
+          "printed_page": 36,
+          "table": "3、合并利润表（其中：营业收入）"
+        }
+      ]
+    },
+    {
+      "id": "total_operating_revenue",
+      "name": "营业总收入",
+      "current": {
+        "period": "2025 年半年度",
+        "raw_cny": "52770984383.52",
+        "yi": 527.71
+      },
+      "prior_year_same_period": {
+        "period": "2024 年半年度",
+        "raw_cny": "50648026578.65",
+        "yi": 506.48
+      },
+      "change_raw_cny": "2122957804.87",
+      "change_yi": 21.23,
+      "yoy_percent": 4.19,
+      "report_stated_yoy_percent": 4.19,
+      "sources": [
+        {
+          "pdf_page": 16,
+          "printed_page": 16,
+          "table": "十二、“质量回报双提升”行动方案贯彻落实情况（叙述性披露：营业总收入 527.71 亿元，同比增长 4.19%）"
+        },
+        {
+          "pdf_page": 36,
+          "printed_page": 36,
+          "table": "3、合并利润表（一、营业总收入）"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "cross_checked": "营业收入在 PDF 第 6、12、36 页三处金额一致；营业总收入在 PDF 第 16、36 页一致；营业收入与营业总收入金额相同",
+    "yoy_recalculated_from_raw": true,
+    "comparative_figures_restated": false,
+    "comparative_restatement_note": "报告第 6 页：公司无需追溯调整或重述以前年度会计数据",
+    "prior_period_source_check": {
+      "title": "宜宾五粮液股份有限公司 2024 年半年度报告全文",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-08-29/1221032897.PDF",
+      "sha256": "609a9a8894b84dadff9f0d5dc43b40df1ddff9513923ca25bbb89971cfc8612e",
+      "pdf_page": 6,
+      "reported_2024h1_revenue_raw_cny": "50648026578.65",
+      "reported_2024h1_yoy_percent": 11.3,
+      "result": "与 2025 年报告第 6、36 页“上年同期”列一致，确认上年同期数未重述"
+    },
+    "other_notes": [
+      "合并利润表第 36 页“利息收入”“已赚保费”“手续费及佣金收入”均为空，故营业总收入等于营业收入",
+      "母公司利润表（第 38 页）“一、营业收入”未填列金额，本底稿采用合并口径",
+      "半年度财务报告未经审计"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "primary_source": {
+    "title": "宜宾五粮液股份有限公司 2025 年半年度报告全文",
+    "publisher": "巨潮资讯网（深圳证券交易所指定信息披露网站）",
+    "company": "宜宾五粮液股份有限公司",
+    "stock_code": "000858",
+    "report_version": "2025 年半年度报告（巨潮资讯网 / 深交所披露标题为“2025年半年度报告（更新前）”）",
+    "disclosure_date": "2025-08-28",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-08-28/1224596951.PDF",
+    "downloaded_at": "2026-11-03T02:44:27+08:00",
+    "accessed_at": "2026-11-03T02:48:24+08:00",
+    "sha256": "e460cfeaac9388f493dcafc14f4f5a6f83521f24a5ad3d3dd8a447cb437d755a",
+    "file_size_bytes": 1503609,
+    "page_count": 126,
+    "file_format": "PDF 1.5",
+    "local_path": "data/raw/1224596951.PDF（已由 .gitignore 忽略，不提交二进制）",
+    "pdf_metadata": {
+      "creator": "Microsoft® Word 2016",
+      "creation_date": "D:20250827145300+08'00'"
+    }
+  },
+  "page_numbering": {
+    "pdf_pages_total": 126,
+    "printed_page_equals_pdf_page": true,
+    "verification_method": "抽查第 2—7、12、16、36、38、100、126 页页眉印刷页码与 PDF 页序，均逐一对应",
+    "note": "封面为 PDF 第 1 页、无印刷页码；PDF 第 2 页起印刷页码与 PDF 页序一致"
+  },
+  "pages_used": [
+    {
+      "pdf_page": 6,
+      "printed_page": 6,
+      "content": "第二节 四、主要会计数据和财务指标：营业收入（本报告期 / 上年同期 / 增减）"
+    },
+    {
+      "pdf_page": 12,
+      "printed_page": 12,
+      "content": "第三节 三、主营业务分析 2、营业收入构成：营业收入合计"
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": 16,
+      "content": "第十二、“质量回报双提升”行动方案贯彻落实情况：营业总收入 527.71 亿元，同比增长 4.19%（叙述性披露）"
+    },
+    {
+      "pdf_page": 36,
+      "printed_page": 36,
+      "content": "第八节 3、合并利润表：一、营业总收入 与 其中：营业收入"
+    },
+    {
+      "pdf_page": 38,
+      "printed_page": 38,
+      "content": "第八节 4、母公司利润表：一、营业收入（未填列金额，本底稿采用合并口径）"
+    }
+  ],
+  "prior_period_cross_check": {
+    "purpose": "核对 2025 年报告“上年同期”列是否经过重述",
+    "title": "宜宾五粮液股份有限公司 2024 年半年度报告全文",
+    "url": "https://static.cninfo.com.cn/finalpage/2024-08-29/1221032897.PDF",
+    "downloaded_at": "2026-11-03T02:45:59+08:00",
+    "sha256": "609a9a8894b84dadff9f0d5dc43b40df1ddff9513923ca25bbb89971cfc8612e",
+    "file_size_bytes": 1374597,
+    "page_count": 119,
+    "pages_used": [6, 16, 35],
+    "reported_values": {
+      "revenue_2024h1_raw_cny": "50648026578.65",
+      "revenue_2024h1_yi": 506.48,
+      "revenue_yoy_2024h1_percent": 11.3,
+      "total_operating_revenue_2024h1_raw_cny": "50648026578.65"
+    },
+    "result": "2024 年报告第 6、35 页的 2024 年上半年金额与 2025 年报告第 6、12、36 页“上年同期”列完全一致，确认上年同期数未重述"
+  },
+  "secondary_cross_check": [
+    {
+      "purpose": "辅助核对 2025 年上半年营业收入 / 营业总收入",
+      "title": "五粮液2025年上半年营收527.71亿元",
+      "publisher": "人民网",
+      "url": "http://finance.people.com.cn/n1/2025/0829/c1004-40552359.html",
+      "reported_values": {
+        "revenue_yi": 527.71
+      }
+    },
+    {
+      "purpose": "辅助核对 2025 年上半年营业收入",
+      "title": "五粮液再次交出“韧性答卷” 上半年实现营收527.71亿元",
+      "publisher": "新华网",
+      "url": "http://www.news.cn/food/20250828/f1241d32753548b2803e9dd044e80700/c.html",
+      "reported_values": {
+        "revenue_yi": 527.71
+      }
+    }
+  ],
+  "verification": {
+    "primary_amounts_cross_checked": true,
+    "cross_check_detail": "营业收入在 PDF 第 6、12、36 页三处一致；营业总收入在 PDF 第 16、36 页一致；营业收入与营业总收入金额相同",
+    "yoy_recalculated_from_raw_amounts": true,
+    "recalculated_yoy_percent": {
+      "revenue": 4.19,
+      "total_operating_revenue": 4.19
+    },
+    "report_stated_yoy_percent": {
+      "revenue": 4.19,
+      "total_operating_revenue": 4.19
+    },
+    "comparative_figures_restated": false,
+    "calc_script": "research/wuliangye-2025h1-revenue/calc.py（python3 calc.py 复算并断言）"
+  },
+  "notes": [
+    "原始 PDF 属于公开披露资料；本文件仅记录读取与校验信息，不复制报告正文。",
+    "外部报道仅用于辅助核对，金额以公司报告为准。",
+    "半年度财务报告未经审计。",
+    "巨潮资讯网与深交所披露标题均为“2025年半年度报告（更新前）”；截至 2026-11-03 检索巨潮资讯网与深交所披露列表（2025-08-27 至 2026-03-31，含关键词“半年度报告”“更新后”“更正”），未发现“更新后”或更正版中文全文；本底稿按工单给定版本核对。",
+    "合并利润表第 36 页“利息收入”“已赚保费”“手续费及佣金收入”均为空，故营业总收入等于营业收入，并非两个独立口径的数据缺失。"
+  ]
+}
