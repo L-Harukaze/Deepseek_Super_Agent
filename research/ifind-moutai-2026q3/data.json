@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "贵州茅台 2026 年三季报财务速览（iFinD）",
+    "purpose": "按工单提取贵州茅台最新已披露财报期的营收、归母净利润、ROE、销售毛利率，并给出申万白酒行业平均对照；供人工复核。",
+    "prepared_at": "2026-11-03T11:56:00+08:00",
+    "data_retrieval_window": "2026-11-03T11:47:00+08:00/2026-11-03T11:55:00+08:00",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "display_unit": "亿元",
+    "rounding": "亿元显示值四舍五入两位小数；同比与百分点变化按原始金额全精度计算后再舍入；表中百分比保留两位小数（行业原始值保留四位小数）。",
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）"
+  },
+  "company": {
+    "name": "贵州茅台酒股份有限公司",
+    "short_name": "贵州茅台",
+    "stock_code": "600519.SH",
+    "exchange": "上海证券交易所",
+    "shenwan_industry": "食品饮料--白酒Ⅱ--白酒Ⅲ（2021 版申万分类，iFinD 股票摘要）"
+  },
+  "report": {
+    "title": "贵州茅台酒股份有限公司 2026 年第三季度报告",
+    "report_type": "第三季度报告",
+    "period": "2026 年前三季度（2026-01-01 至 2026-09-30）",
+    "single_quarter": "2026 年第三季度（2026-07-01 至 2026-09-30）",
+    "comparative_period": "2025 年前三季度 / 2025 年第三季度",
+    "disclosure_date": "2026-10-31",
+    "audited": false,
+    "announcement_check": "iFinD search_notice 检索到《贵州茅台：贵州茅台2026年第三季度报告》，日期 2026-10-31；另检索到《2026年第三季度主要经营数据公告》（临2026-033）。"
+  },
+  "formulas": {
+    "display_yi": "原始金额（元）÷ 100,000,000",
+    "yoy_percent": "（本期金额 − 上年同期金额）÷ |上年同期金额| × 100%",
+    "gross_margin": "（营业收入 − 营业成本）÷ 营业收入 × 100%",
+    "roe_company": "加权平均净资产收益率（归母口径，公司披露值）",
+    "roe_industry": "行业合计净利润 ÷ 行业平均净资产 × 100%（iFinD 行业财务数据，整体法）",
+    "example_revenue_yoy": "(130970743649.04 − 128453707655.86) ÷ 128453707655.86 × 100% = 1.9595%"
+  },
+  "company_metrics": {
+    "cumulative_2026_9m": {
+      "营业总收入": {
+        "raw_cny": "133283652508.95",
+        "yi": 1332.84,
+        "prior_raw_cny": "130903889634.88",
+        "prior_yi": 1309.04,
+        "yoy_percent": 1.82,
+        "source": "iFinD search_notice + get_security_indicators"
+      },
+      "营业收入": {
+        "raw_cny": "130970743649.04",
+        "yi": 1309.71,
+        "prior_raw_cny": "128453707655.86",
+        "prior_yi": 1284.54,
+        "yoy_percent": 1.96,
+        "source": "iFinD search_notice + get_security_indicators"
+      },
+      "归母净利润": {
+        "raw_cny": "64467425981.95",
+        "yi": 644.67,
+        "prior_raw_cny": "64626750000.00",
+        "prior_yi": 646.27,
+        "prior_raw_cny_note": "由 iFinD 亿元显示值 646.2675 亿元 × 1e8 得到，精度为万元级；公司报告原文的上年同期元级金额未在接口返回中出现。",
+        "yoy_percent": -0.25,
+        "source": "iFinD search_notice + get_security_indicators"
+      }
+    },
+    "single_quarter_2026q3": {
+      "营业总收入": {
+        "yi": 410.06,
+        "prior_yi": 398.10,
+        "yoy_percent": 3.00,
+        "source": "iFinD get_security_indicators（亿元显示值）"
+      },
+      "营业收入": {
+        "raw_cny": "40267482684.56",
+        "yi": 402.67,
+        "prior_yi": 390.64,
+        "yoy_percent": 3.08,
+        "source": "iFinD search_notice + get_security_indicators"
+      },
+      "归母净利润": {
+        "raw_cny": "19950545560.09",
+        "yi": 199.51,
+        "prior_yi": 192.24,
+        "yoy_percent": 3.78,
+        "source": "iFinD search_notice + get_security_indicators"
+      }
+    },
+    "ratios": {
+      "加权平均ROE": {
+        "2026_9m_percent": 24.47,
+        "2025_9m_percent": 24.64,
+        "change_ppt": -0.17,
+        "2026_q3_percent": 7.64,
+        "2025_q3_percent": 7.75,
+        "q3_change_ppt": -0.11,
+        "source": "公司 2026 年第三季度报告“主要会计数据和财务指标”；iFinD get_stock_summary 交叉核对为 24.47%"
+      },
+      "销售毛利率": {
+        "2026_9m_percent": 89.5811,
+        "2025_9m_percent": 91.2934,
+        "change_ppt": -1.7123,
+        "source": "iFinD get_security_indicators（销售毛利率、营业成本）；按（营业收入−营业成本）÷营业收入复算一致"
+      },
+      "营业成本": {
+        "2026_9m_yi": 136.4572,
+        "2025_9m_yi": 111.8397,
+        "yoy_percent": 22.01,
+        "source": "iFinD get_security_indicators（亿元显示值）"
+      }
+    }
+  },
+  "industry_metrics": {
+    "definition": "申万三级行业（2014 版）“白酒”，代码 851231.SL；iFinD 行业财务数据“盈利能力”专题报表，报告期 20260930，按行业合计值计算（整体法）。",
+    "roe": {
+      "2026_9m_percent": 15.6372,
+      "2025_9m_percent": 17.5707,
+      "change_ppt": -1.9335
+    },
+    "gross_margin": {
+      "2026_9m_percent": 81.8105,
+      "2025_9m_percent": 82.0570,
+      "change_ppt": -0.2465
+    },
+    "alternative_definition_note": "iFinD 板块接口（申万 2021 版“白酒Ⅱ”，001030012005）另给出销售毛利率（算术平均）67.1146%；该值与行业报表整体法 81.8105% 差异来自等权平均与营收加权（整体法）的口径差异，且该接口的报告期参数回显不一致，故本稿主表不采用。"
+  },
+  "comparison_2026_9m": {
+    "roe": {
+      "company_percent": 24.47,
+      "industry_percent": 15.6372,
+      "difference_ppt": 8.83
+    },
+    "gross_margin": {
+      "company_percent": 89.5811,
+      "industry_percent": 81.8105,
+      "difference_ppt": 7.77
+    }
+  },
+  "verification": {
+    "yoy_recalculated_from_raw_amounts": true,
+    "recalculated_yoy_percent": {
+      "营业总收入": 1.8179,
+      "营业收入": 1.9595,
+      "归母净利润": -0.2465,
+      "Q3营业总收入": 3.0029,
+      "Q3营业收入": 3.0799,
+      "Q3归母净利润": 3.7806
+    },
+    "stated_yoy_percent": {
+      "营业总收入": 1.8179,
+      "营业收入": 1.9595,
+      "归母净利润": -0.2465,
+      "Q3营业总收入": 3.0029,
+      "Q3营业收入": 3.0799,
+      "Q3归母净利润": 3.7805
+    },
+    "gross_margin_recalculated": {
+      "2026_9m": 89.5811,
+      "2025_9m": 91.2934
+    },
+    "industry_csv_row_checked": "851231.SL 白酒，2026-09-30 与 2025-09-30 的 ROE、销售毛利率均与接口显示一致",
+    "calc_script": "research/ifind-moutai-2026q3/calc.py（python3 calc.py，全部断言通过）"
+  },
+  "limitations": [
+    "2026 年第三季度报告未经审计。",
+    "iFinD 结构化财务接口不返回公告原文页码，本稿以报告期、报表类型和接口字段定位，无法满足“原文页码”要求；公告语义检索仅返回片段与披露日期。",
+    "公司加权 ROE 为归母口径、按加权平均净资产计算；行业 ROE 为整体法（行业合计净利润/平均净资产），两者口径不完全一致，差值仅作方向性参考。",
+    "行业毛利率采用 iFinD 行业报表整体法（营收加权）；若按成分股等权算术平均，结果会显著不同，不能与整体法混用。",
+    "2025 年部分同期金额由 iFinD 亿元显示值换算，精度为万元级；公司披露的上年同期同比增速与本稿复算值一致（四舍五入到两位小数）。",
+    "iFinD 数据后续可能因财报更正或数据商调整而变化；以公司披露原文为准。",
+    "本稿仅为公开数据整理与速览，不构成投资建议。"
+  ]
+}
