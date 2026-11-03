@@ -40,7 +40,9 @@
         "cum_value": "M001625519",
         "cum_yoy": "M001625521"
       },
-      "caliber": "全国月度社会消费品零售总额；含商品零售与餐饮收入；名义值，未扣除价格因素；当月值单位为亿元。"
+      "caliber": "全国月度社会消费品零售总额；含商品零售与餐饮收入；名义值，未扣除价格因素；当月值单位为亿元。",
+      "prior_year_cum_value_yi": "365877.0",
+      "prior_year_cum_yoy_pct": 4.5
     },
     "tobacco_alcohol_retail": {
       "display_name": "限额以上单位烟酒类零售额",
@@ -61,7 +63,10 @@
         "cum_value": "S000055120",
         "cum_yoy": "M003015109"
       },
-      "caliber": "国家统计局“2026年9月份社会消费品零售总额主要数据”表中，烟酒类列于“其中：限额以上单位商品零售额”之下，即限额以上单位商品零售额中的烟酒类；含烟草制品与酒类，不含餐饮收入；名义值，未扣除价格因素。"
+      "caliber": "国家统计局“2026年9月份社会消费品零售总额主要数据”表中，烟酒类列于“其中：限额以上单位商品零售额”之下，即限额以上单位商品零售额中的烟酒类；含烟草制品与酒类，不含餐饮收入；名义值，未扣除价格因素。",
+      "prior_year_cum_value_yi": "4808",
+      "prior_year_cum_yoy_pct": 4.0,
+      "release_prior_year_same_month_value_yi": 615
     }
   },
   "checks": [
@@ -88,7 +93,7 @@
     {
       "name": "上年同期基数核对",
       "result": "pass",
-      "detail": "iFinD EDB 2025年9月：社零当月值 41,971.0 亿元、同比 +3.0%，与国家统计局 2025-10-20 发布稿的 41,971 亿元、+3.0% 一致；烟酒类当月值 614.8 亿元、同比 +1.6%（同比与发布数据一致，当月值取自 iFinD 同序列）。"
+      "detail": "iFinD EDB 2025年9月：社零当月值 41,971.0 亿元、同比 +3.0%，与国家统计局 2025-10-20 发布稿的 41,971 亿元、+3.0% 一致；烟酒类当月值 614.8 亿元，与发布稿 615 亿元一致（取整），同比 +1.6% 与发布稿一致。2025年1—9月烟酒类累计 4,808 亿元、+4.0%（发布稿）；按 2026 年发布同比反推的 2025 年可比基数约 582 亿元（当月）、4,534 亿元（累计），分别比 2025 年公布水平低约 5.3%、5.7%，与统计范围调整的解释一致。"
     }
   ],
   "caliber_notes": {
@@ -120,6 +125,17 @@
       "used_for": "当月值、累计值、同比、口径定义与可比口径附注"
     },
     {
+      "id": "nbs-release-2025-09",
+      "type": "official_release",
+      "title": "2025年9月份社会消费品零售总额增长3.0%",
+      "publisher": "国家统计局",
+      "published_at": "2025-10-20T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202510/t20251020_1961606.html",
+      "local_file": "tmp/nbs_202509.html",
+      "sha256": "9155b7b20057caa7193bb89ad706c98f0fb76381912ba132c80db61abb285a66",
+      "used_for": "上年同月/累计基数与限额以上口径交叉核对"
+    },
+    {
       "id": "ifind-edb-monthly",
       "type": "data_interface",
       "server": "ifind",
@@ -128,7 +144,10 @@
       "query": "社会消费品零售总额:当月值 与 社会消费品零售总额:当月同比，时间范围2025年1月至2026年9月",
       "called_at": "2026-11-03T12:22:02+08:00",
       "finished_at": "2026-11-03T12:22:06+08:00",
-      "indicator_ids": ["M001625518", "M001625520"],
+      "indicator_ids": [
+        "M001625518",
+        "M001625520"
+      ],
       "raw_file": "data/raw/ifind/edb_social_retail.json",
       "sha256": "220a871f977328ae618074e879edaad14205b3779e031467fa55f33a117cc8f3"
     },
@@ -141,7 +160,9 @@
       "query": "烟酒类商品零售类值:当月值，时间范围2025年1月至2026年9月",
       "called_at": "2026-11-03T12:22:21+08:00",
       "finished_at": "2026-11-03T12:22:24+08:00",
-      "indicator_ids": ["M003015106"],
+      "indicator_ids": [
+        "M003015106"
+      ],
       "raw_file": "data/raw/ifind/edb_tobacco_alcohol_value.json",
       "sha256": "3af1ac61f663a16228af6eaef8526939ba419981dc025e6b11699d0e6066546c"
     },
@@ -154,7 +175,9 @@
       "query": "烟酒类商品零售类值:当月值 与 烟酒类商品零售类值:当月同比，时间范围2025年1月至2026年9月",
       "called_at": "2026-11-03T12:22:07+08:00",
       "finished_at": "2026-11-03T12:22:08+08:00",
-      "indicator_ids": ["M003015108"],
+      "indicator_ids": [
+        "M003015108"
+      ],
       "raw_file": "data/raw/ifind/edb_tobacco_alcohol.json",
       "sha256": "3d857c4df9d5925fe3c01d043cd3c88bfa71e59a870a747be550b72a20c8acbf"
     },
@@ -167,7 +190,10 @@
       "query": "社会消费品零售总额:累计值 与 社会消费品零售总额:累计同比，2026年9月",
       "called_at": "2026-11-03T12:25:19+08:00",
       "finished_at": "2026-11-03T12:25:24+08:00",
-      "indicator_ids": ["M001625519", "M001625521"],
+      "indicator_ids": [
+        "M001625519",
+        "M001625521"
+      ],
       "raw_file": "data/raw/ifind/edb_social_retail_cum_202609.json",
       "sha256": "e6b42d837dc828719a8ba0a8533f033f236bd89aa0696b70ae4862c3aaeeff4a"
     },
@@ -180,7 +206,10 @@
       "query": "烟酒类商品零售类值:累计同比 与 零售额:烟酒类:累计值，2026年9月",
       "called_at": "2026-11-03T12:25:50+08:00",
       "finished_at": "2026-11-03T12:25:55+08:00",
-      "indicator_ids": ["M003015109", "S000055120"],
+      "indicator_ids": [
+        "M003015109",
+        "S000055120"
+      ],
       "raw_file": "data/raw/ifind/edb_tobacco_alcohol_cum_202609.json",
       "sha256": "bcc230ecedc783dd16432e66c68628f2f1c19f08b2a37a9238b53255c57546ed"
     },
