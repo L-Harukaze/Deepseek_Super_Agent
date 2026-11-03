@@ -4,12 +4,14 @@
     "title": "贵州茅台 2026 年三季报财务速览（iFinD）",
     "purpose": "按工单提取贵州茅台最新已披露财报期的营收、归母净利润、ROE、销售毛利率，并给出申万白酒行业平均对照；供人工复核。",
     "prepared_at": "2026-11-03T11:56:00+08:00",
-    "data_retrieval_window": "2026-11-03T11:47:00+08:00/2026-11-03T11:55:00+08:00",
+    "data_retrieval_window": "2026-11-03T11:47:00+08:00/2026-11-03T12:03:00+08:00",
     "currency": "CNY",
     "raw_amount_unit": "元",
     "display_unit": "亿元",
     "rounding": "亿元显示值四舍五入两位小数；同比与百分点变化按原始金额全精度计算后再舍入；表中百分比保留两位小数（行业原始值保留四位小数）。",
-    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）"
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）",
+    "revised_at": "2026-11-03T12:04:00+08:00",
+    "revision_note": "2026-11-03 12:02 按用户要求追加销售净利率（同一报告期、累计口径），原表内容保留。"
   },
   "company": {
     "name": "贵州茅台酒股份有限公司",
@@ -67,8 +69,8 @@
     "single_quarter_2026q3": {
       "营业总收入": {
         "yi": 410.06,
-        "prior_yi": 398.10,
-        "yoy_percent": 3.00,
+        "prior_yi": 398.1,
+        "yoy_percent": 3.0,
         "source": "iFinD get_security_indicators（亿元显示值）"
       },
       "营业收入": {
@@ -102,6 +104,15 @@
         "change_ppt": -1.7123,
         "source": "iFinD get_security_indicators（销售毛利率、营业成本）；按（营业收入−营业成本）÷营业收入复算一致"
       },
+      "销售净利率": {
+        "2026_9m_percent": 50.9405,
+        "2025_9m_percent": 52.0801,
+        "change_ppt": -1.1396,
+        "formula": "净利润（含少数股东损益）÷营业收入×100%",
+        "net_profit_2026_9m_yi": 667.1714,
+        "net_profit_2025_9m_yi": 668.988,
+        "source": "iFinD get_security_indicators"
+      },
       "营业成本": {
         "2026_9m_yi": 136.4572,
         "2025_9m_yi": 111.8397,
@@ -119,7 +130,7 @@
     },
     "gross_margin": {
       "2026_9m_percent": 81.8105,
-      "2025_9m_percent": 82.0570,
+      "2025_9m_percent": 82.057,
       "change_ppt": -0.2465
     },
     "alternative_definition_note": "iFinD 板块接口（申万 2021 版“白酒Ⅱ”，001030012005）另给出销售毛利率（算术平均）67.1146%；该值与行业报表整体法 81.8105% 差异来自等权平均与营收加权（整体法）的口径差异，且该接口的报告期参数回显不一致，故本稿主表不采用。"
@@ -159,7 +170,11 @@
       "2025_9m": 91.2934
     },
     "industry_csv_row_checked": "851231.SL 白酒，2026-09-30 与 2025-09-30 的 ROE、销售毛利率均与接口显示一致",
-    "calc_script": "research/ifind-moutai-2026q3/calc.py（python3 calc.py，全部断言通过）"
+    "calc_script": "research/ifind-moutai-2026q3/calc.py（python3 calc.py，全部断言通过）",
+    "net_margin_recalculated": {
+      "2026_9m": 50.9405,
+      "2025_9m": 52.0801
+    }
   },
   "limitations": [
     "2026 年第三季度报告未经审计。",
