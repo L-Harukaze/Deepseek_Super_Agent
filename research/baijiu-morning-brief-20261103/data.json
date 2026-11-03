@@ -1,0 +1,545 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "白酒晨会简报与数据附表（2026-11-03）",
+    "purpose": "汇总本群已交付的三家公司速览卡、板块与资讯、宏观背景，形成 500 字内晨会简报与数据附表；标注缺口，不补造数字。",
+    "as_of": "2026-11-03T12:45:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "market_data_time": "2026-11-03 11:30（上午收盘；12:12–12:20 快照）",
+    "brief_file": "research/baijiu-morning-brief-20261103/brief.md",
+    "brief_char_limit": 500,
+    "brief_prose_char_count": 432,
+    "brief_nontable_char_count": 492,
+    "char_count_method": "非空白字符；正文行计入，Markdown 表格行（以 | 开头）不计入。",
+    "not_re_queried": "本简报未重新调用 iFinD；数值取自前序已交付底稿，复算与交叉核对见 calc.py。",
+    "prior_deliveries": [
+      {
+        "pr": 6,
+        "scope": "泸州老窖 2026 三季报速览卡",
+        "branch": "agent/ifind-luzhou-morning-9e3ccce5da50"
+      },
+      {
+        "pr": 7,
+        "scope": "五粮液 2026 三季报速览卡",
+        "branch": "agent/ifind-wuliangye-morning-6c26796240d8"
+      },
+      {
+        "pr": 8,
+        "scope": "申万白酒Ⅱ板块行情与近一周要闻",
+        "branch": "agent/ifind-liquor-sector-18b6596118dc"
+      },
+      {
+        "pr": 9,
+        "scope": "贵州茅台 2026 三季报速览卡",
+        "branch": "agent/ifind-moutai-morning-cddda25d9556"
+      },
+      {
+        "pr": 10,
+        "scope": "2026-09 社零与限额以上烟酒类零售额",
+        "branch": "agent/ifind-retail-data-48bc124d90c0"
+      }
+    ],
+    "out_of_scope_reference": [
+      {
+        "pr": 4,
+        "scope": "贵州茅台 2026 三季报财务速览（ROE/毛利率/净利率）",
+        "included_in_brief": false
+      },
+      {
+        "pr": 5,
+        "scope": "贵州茅台财务速览回帖与核验",
+        "included_in_brief": false
+      }
+    ]
+  },
+  "companies": [
+    {
+      "name": "贵州茅台",
+      "code": "600519.SH",
+      "quote": {
+        "price_cny": 1457.66,
+        "change_pct": 1.29,
+        "change_pct_raw": 1.2896949482315456,
+        "pe_ttm": 22.18,
+        "pe_ttm_raw": 22.1784006,
+        "snapshot": "2026-11-03T12:14:53+08:00",
+        "last_trade": "2026-11-03T11:30:00+08:00"
+      },
+      "financials": {
+        "period_end": "2026-09-30",
+        "period_label": "2026 年前三季度（累计）",
+        "disclosure_date": "2026-10-31",
+        "audited": false,
+        "revenue": {
+          "label": "营业收入（合并利润表，非营业总收入）",
+          "raw_cny": "130970743649.04",
+          "prior_raw_cny": "128453707655.86",
+          "yi": 1309.71,
+          "prior_yi": 1284.54,
+          "yoy_pct": 1.96
+        },
+        "net_profit": {
+          "label": "归属于上市公司股东的净利润",
+          "raw_cny": "64467425981.95",
+          "prior_raw_cny": "64626746712.18",
+          "yi": 644.67,
+          "prior_yi": 646.27,
+          "yoy_pct": -0.25
+        },
+        "total_operating_revenue": {
+          "label": "营业总收入（参考，不混用）",
+          "raw_cny": "133283652508.95",
+          "yi": 1332.84,
+          "yoy_pct": 1.82
+        },
+        "q3": {
+          "revenue": {
+            "raw_cny": "40267482684.56",
+            "yi": 402.67,
+            "yoy_pct": 3.08
+          },
+          "net_profit": {
+            "raw_cny": "19950545560.09",
+            "yi": 199.51,
+            "yoy_pct": 3.78
+          }
+        }
+      },
+      "source": {
+        "pr": 9,
+        "branch": "agent/ifind-moutai-morning-cddda25d9556"
+      }
+    },
+    {
+      "name": "五粮液",
+      "code": "000858.SZ",
+      "quote": {
+        "price_cny": 75.17,
+        "change_pct": 1.24,
+        "change_pct_raw": 1.2390572390572414,
+        "pe_ttm": 23.94,
+        "pe_ttm_raw": 23.9353591,
+        "snapshot": "2026-11-03T12:12:48+08:00",
+        "last_trade": "2026-11-03T11:30:00+08:00"
+      },
+      "financials": {
+        "period_end": "2026-09-30",
+        "period_label": "2026 年前三季度（累计）",
+        "disclosure_date": "2026-10-28",
+        "audited": false,
+        "revenue": {
+          "label": "营业收入（与营业总收入同额）",
+          "raw_cny": "32858473964.34",
+          "prior_raw_cny": "30637727654.97",
+          "yi": 328.58,
+          "prior_yi": 306.38,
+          "yoy_pct": 7.25
+        },
+        "net_profit": {
+          "label": "归属于上市公司股东的净利润",
+          "raw_cny": "9710647471.03",
+          "prior_raw_cny": "6474551792.18",
+          "yi": 97.11,
+          "prior_yi": 64.75,
+          "yoy_pct": 49.98
+        },
+        "prior_year_9m_yoy": {
+          "revenue_pct": -54.8885,
+          "net_profit_pct": -74.0299
+        },
+        "q3": {
+          "revenue": {
+            "raw_cny": "4441799422.57",
+            "prior_raw_cny": "7127760000",
+            "prior_precision_note": "2025Q3 由 iFinD 亿元显示值换算，万元级精度",
+            "yi": 44.42,
+            "yoy_pct": -37.68
+          },
+          "net_profit": {
+            "raw_cny": "957704479.72",
+            "prior_raw_cny": "1850700000",
+            "prior_precision_note": "2025Q3 由 iFinD 亿元显示值换算，万元级精度",
+            "yi": 9.58,
+            "yoy_pct": -48.25
+          }
+        }
+      },
+      "source": {
+        "pr": 7,
+        "branch": "agent/ifind-wuliangye-morning-6c26796240d8"
+      }
+    },
+    {
+      "name": "泸州老窖",
+      "code": "000568.SZ",
+      "quote": {
+        "price_cny": 80.51,
+        "change_pct": 0.93,
+        "change_pct_raw": 0.9276670427479117,
+        "pe_ttm": 20.65,
+        "pe_ttm_raw": 20.6473203,
+        "snapshot": "2026-11-03 12:15:15",
+        "last_trade": "2026-11-03T11:30:00+08:00"
+      },
+      "financials": {
+        "period_end": "2026-09-30",
+        "period_label": "2026 年前三季度（累计）",
+        "disclosure_date": "2026-10-30",
+        "audited": false,
+        "revenue": {
+          "label": "营业收入（与营业总收入同额）",
+          "raw_cny": "14667616562.73",
+          "prior_raw_cny": "23127459902.13",
+          "yi": 146.68,
+          "prior_yi": 231.27,
+          "yoy_pct": -36.58
+        },
+        "net_profit": {
+          "label": "归属于上市公司股东的净利润",
+          "raw_cny": "5671059241.53",
+          "prior_raw_cny": "10762394649.32",
+          "yi": 56.71,
+          "prior_yi": 107.62,
+          "yoy_pct": -47.31
+        },
+        "q3": {
+          "revenue": {
+            "raw_cny": "4195391986.95",
+            "yi": 41.95,
+            "yoy_pct": -37.14
+          },
+          "net_profit": {
+            "raw_cny": "1331795155.20",
+            "yi": 13.32,
+            "yoy_pct": -57.03
+          }
+        }
+      },
+      "source": {
+        "pr": 6,
+        "branch": "agent/ifind-luzhou-morning-9e3ccce5da50"
+      },
+      "note": "速览卡未列示当日涨跌幅；本表 +0.93% 取自同 PR 底稿 data.json（原始 +0.9277%），并与 PR #8 成分股表一致。"
+    }
+  ],
+  "sector": {
+    "name": "白酒Ⅱ",
+    "code": "801125.SL",
+    "last": 39779.84,
+    "change_pct": 1.11,
+    "change_pct_raw": 1.1067651576247517,
+    "amount_cny": "12686964200",
+    "amount_yi": 126.87,
+    "rise_count": 17,
+    "fall_count": 2,
+    "constituent_count": 19,
+    "quote_time": "2026-11-03T11:30:00+08:00",
+    "leaders": {
+      "top_gainer": {
+        "code": "000995.SZ",
+        "name": "皇台酒业",
+        "price": 17.16,
+        "change_pct": 10.0
+      },
+      "top_loser": {
+        "code": "603198.SH",
+        "name": "迎驾贡酒",
+        "price": 46.09,
+        "change_pct": -5.03
+      }
+    },
+    "constituents": [
+      {
+        "code": "000995.SZ",
+        "name": "皇台酒业",
+        "price": 17.16,
+        "change_pct": 10.000000000000004,
+        "amount_cny": "44325996"
+      },
+      {
+        "code": "600779.SH",
+        "name": "水井坊",
+        "price": 28.86,
+        "change_pct": 2.6315789473684155,
+        "amount_cny": "432665511.93"
+      },
+      {
+        "code": "002646.SZ",
+        "name": "天佑德酒",
+        "price": 7.08,
+        "change_pct": 2.460202604920404,
+        "amount_cny": "60743958"
+      },
+      {
+        "code": "600559.SH",
+        "name": "老白干酒",
+        "price": 12.04,
+        "change_pct": 2.3809523809523756,
+        "amount_cny": "360435538.16"
+      },
+      {
+        "code": "600519.SH",
+        "name": "贵州茅台",
+        "price": 1457.66,
+        "change_pct": 1.2896949482315456,
+        "amount_cny": "5122686354.73"
+      },
+      {
+        "code": "000858.SZ",
+        "name": "五粮液",
+        "price": 75.17,
+        "change_pct": 1.2390572390572414,
+        "amount_cny": "1413271698.44"
+      },
+      {
+        "code": "000799.SZ",
+        "name": "酒鬼酒",
+        "price": 35.7,
+        "change_pct": 1.161802210257874,
+        "amount_cny": "235731361.04"
+      },
+      {
+        "code": "002304.SZ",
+        "name": "洋河股份",
+        "price": 38.26,
+        "change_pct": 1.0031678986272319,
+        "amount_cny": "371138432.72"
+      },
+      {
+        "code": "600197.SH",
+        "name": "伊力特",
+        "price": 9.54,
+        "change_pct": 0.9523809523809509,
+        "amount_cny": "60507334.4"
+      },
+      {
+        "code": "000568.SZ",
+        "name": "泸州老窖",
+        "price": 80.51,
+        "change_pct": 0.9276670427479117,
+        "amount_cny": "1037498377.53"
+      },
+      {
+        "code": "603919.SH",
+        "name": "金徽酒",
+        "price": 16.88,
+        "change_pct": 0.8363201911589043,
+        "amount_cny": "148235166.48"
+      },
+      {
+        "code": "000596.SZ",
+        "name": "古井贡酒",
+        "price": 104.36,
+        "change_pct": 0.5394990366088653,
+        "amount_cny": "586571530.5"
+      },
+      {
+        "code": "600702.SH",
+        "name": "舍得酒业",
+        "price": 34.16,
+        "change_pct": 0.47058823529410765,
+        "amount_cny": "228873955.99"
+      },
+      {
+        "code": "603369.SH",
+        "name": "今世缘",
+        "price": 34.84,
+        "change_pct": 0.2301495972382204,
+        "amount_cny": "423428261.44"
+      },
+      {
+        "code": "600199.SH",
+        "name": "金种子酒",
+        "price": 7.73,
+        "change_pct": 0.12953367875648542,
+        "amount_cny": "424551111.71"
+      },
+      {
+        "code": "600809.SH",
+        "name": "山西汾酒",
+        "price": 131.09,
+        "change_pct": 0.10691103474609759,
+        "amount_cny": "839727154.41"
+      },
+      {
+        "code": "603589.SH",
+        "name": "口子窖",
+        "price": 18.73,
+        "change_pct": 0.05341880341881177,
+        "amount_cny": "170423278.89"
+      },
+      {
+        "code": "000860.SZ",
+        "name": "顺鑫农业",
+        "price": 12.22,
+        "change_pct": -0.48859934853419157,
+        "amount_cny": "198700244.11"
+      },
+      {
+        "code": "603198.SH",
+        "name": "迎驾贡酒",
+        "price": 46.09,
+        "change_pct": -5.027817844632181,
+        "amount_cny": "527448920.87"
+      }
+    ],
+    "amount_sum_cny": "12686964187.35",
+    "amount_diff_cny": "12.65",
+    "source": {
+      "pr": 8,
+      "branch": "agent/ifind-liquor-sector-18b6596118dc"
+    }
+  },
+  "news": [
+    {
+      "rank": 1,
+      "kind": "公告",
+      "title": "泸州老窖：2026年三季度报告",
+      "date": "2026-10-30",
+      "source": "泸州老窖公告（iFinD search_notice 检索）",
+      "url": null,
+      "key_facts": "2026Q3 归母净利润 1,331,795,155.20 元，同比 -57.03%；2026 年前三季度归母净利润 5,671,059,241.53 元，同比 -47.31%。",
+      "snippet_note": "iFinD 公告检索返回标题、日期与片段，不返回公告原文 URL 或页码。"
+    },
+    {
+      "rank": 2,
+      "kind": "行业新闻",
+      "title": "库存出清持续推进 白酒行业进入磨底期",
+      "date": "2026-11-03",
+      "source": "证券日报（东方财富网转载）",
+      "url": "https://wap.eastmoney.com/a/202611033919177757.html",
+      "key_facts": "三季报落地后多家酒企营收逐步企稳；中信证券称行业处于磨底后期、库存出清尾声；国金证券称价盘基本筑底、渠道去库进入收尾；机构预计 2027 年盈利修复，但强调并非终端消费实质性反转。"
+    },
+    {
+      "rank": 3,
+      "kind": "行业新闻",
+      "title": "白酒板块逆市走强 19个交易日上涨近15%",
+      "date": "2026-11-03",
+      "source": "凤凰网财经",
+      "url": "https://finance.ifeng.com/c/8xk5Xp2vMks",
+      "key_facts": "白酒板块 19 个交易日上涨近 15%；河南、山东、广东、安徽多地酒商库存同比下降约 10%–20%，部分终端库存压缩至 1–2 个月；飞天茅台批价 1700–1750 元、普五 750–800 元、国窖1573 820–850 元；高盛预计 2026Q3 为行业盈利低谷。"
+    }
+  ],
+  "macro": {
+    "period": "2026-09",
+    "published_at": "2026-10-19T10:00:00+08:00",
+    "publisher": "国家统计局",
+    "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html",
+    "social_retail_total": {
+      "month_value_yi": 42432.5,
+      "month_yoy_pct": 1.1,
+      "cum_value_yi": 370001.3,
+      "cum_yoy_pct": 1.1,
+      "prior_year_same_month_value_yi": 41971.0,
+      "release_month_value_yi": 42433
+    },
+    "tobacco_alcohol_retail": {
+      "month_value_yi": 662.6,
+      "month_yoy_pct": 13.8,
+      "cum_value_yi": 5105.4,
+      "cum_yoy_pct": 12.6,
+      "prior_year_same_month_value_yi": 614.8,
+      "release_month_value_yi": 663,
+      "level_implied_yoy_pct": 7.77,
+      "published_vs_level_diff_pct": 6.03
+    },
+    "calendar_effect": "2026 年中秋 9-25；2025 年中秋 10-6（与国庆连休）。",
+    "latest_note": "截至 2026-11-03，iFinD 与统计局均未发布 2026-10 数据；最新为 2026-09。",
+    "source": {
+      "pr": 10,
+      "branch": "agent/ifind-retail-data-48bc124d90c0"
+    }
+  },
+  "status": {
+    "verified": [
+      {
+        "item": "三家 2026 三季报营收/归母及同比",
+        "data_time": "报告期 2026-09-30；披露 2026-10-28/10-30/10-31",
+        "basis": "iFinD 结构化接口与公告片段逐位核对；同比复算一致（PR #4/#6/#7/#9）"
+      },
+      {
+        "item": "三家最新价/涨跌幅/PE TTM",
+        "data_time": "2026-11-03 12:12–12:15 快照（最新成交 11:30）",
+        "basis": "iFinD 实时快照；与 PR #8 成分股表一致"
+      },
+      {
+        "item": "申万白酒Ⅱ板块行情",
+        "data_time": "2026-11-03 11:30",
+        "basis": "iFinD 快照+15 分钟高频；成交额与 19 只成分股合计差 12.65 元（PR #8）"
+      },
+      {
+        "item": "2026-09 社零、烟酒类",
+        "data_time": "2026-09（发布 2026-10-19）",
+        "basis": "iFinD EDB 与统计局发布稿取整一致（PR #10）"
+      },
+      {
+        "item": "泸州老窖 Q3 归母 13.32 亿元/-57.03%",
+        "data_time": "2026Q3（公告 2026-10-30）",
+        "basis": "与 PR #6 单季数据一致（PR #8）"
+      },
+      {
+        "item": "泸州老窖当日涨跌幅 +0.93%",
+        "data_time": "2026-11-03 12:15:15",
+        "basis": "PR #6 底稿原始 +0.9277%；PR #8 成分股表 +0.93%"
+      }
+    ],
+    "pending": [
+      {
+        "item": "2026 三季报审计状态",
+        "current": "三家均未经审计",
+        "data_time": "2026Q3",
+        "impact": "以审计/更正后数据为准"
+      },
+      {
+        "item": "公告原文页码/全文",
+        "current": "无法标注",
+        "data_time": "—",
+        "impact": "iFinD 公告检索只返回标题、日期、片段，不返回原文 URL/页码；未下载全文（PR #4/#6/#7/#9）"
+      },
+      {
+        "item": "五粮液累计与单季方向相反",
+        "current": "累计 +7.25%/+49.98%，Q3 单季 -37.68%/-48.25%",
+        "data_time": "2026Q3",
+        "impact": "2025 低基数；引用须注明口径；Q3 下滑原因未查全文（PR #7）"
+      },
+      {
+        "item": "五粮液 2025Q3 单季基数",
+        "current": "71.28 亿元/18.51 亿元",
+        "data_time": "2025Q3",
+        "impact": "由 iFinD 亿元显示值换算，万元级精度（PR #7）"
+      },
+      {
+        "item": "新闻全文与来源",
+        "current": "3 条标题/日期",
+        "data_time": "2026-10-30/2026-11-03",
+        "impact": "iFinD 只返回标题、日期、URL、片段；媒体名称按域名推断；批价、库存、机构观点未独立核实（PR #8）"
+      },
+      {
+        "item": "烟酒类 +13.8% 构成",
+        "current": "含烟草及全部酒种",
+        "data_time": "2026-09",
+        "impact": "无法拆分白酒；+13.8% 与水平复算 +7.77% 的 6.03pct 差异明细未披露（PR #10）"
+      }
+    ],
+    "gaps": [
+      {
+        "item": "2026-10 社零",
+        "current": "未发布",
+        "data_time": "截至 2026-11-03",
+        "impact": "最新为 2026-09"
+      },
+      {
+        "item": "全天板块行情",
+        "current": "仅有 11:30 上午收盘",
+        "data_time": "2026-11-03 11:30",
+        "impact": "午后行情未取，非全天收盘"
+      },
+      {
+        "item": "前序茅台财务补充（ROE/毛利率/净利率）",
+        "current": "PR #4/#5",
+        "data_time": "2026Q3",
+        "impact": "不在三张速览卡口径内，未并入表 1；如需另查"
+      }
+    ]
+  }
+}
