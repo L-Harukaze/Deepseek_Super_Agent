@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "2026年9月社会消费品零售总额与限额以上单位烟酒类零售额（iFinD）",
+    "purpose": "按飞书工单，通过同花顺 iFinD 查询最新一期已公布的社会消费品零售总额、限额以上单位烟酒类零售额的当月值与同比，注明数据期间、口径、来源接口，并说明对白酒研究的意义与不能直接得出的结论。",
+    "prepared_at": "2026-11-03T12:30:00+08:00",
+    "retrieval_window": "2026-11-03T12:21:35+08:00/2026-11-03T12:25:55+08:00",
+    "latest_period": "2026-09",
+    "latest_period_end": "2026-09-30",
+    "publication": {
+      "publisher": "国家统计局",
+      "release_title": "2026年1—9月份社会消费品零售总额增长1.1%",
+      "published_at": "2026-10-19T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html"
+    },
+    "currency": "CNY",
+    "value_unit": "亿元",
+    "yoy_unit": "%",
+    "rounding": "iFinD EDB 返回一位小数；国家统计局发布稿四舍五入到整数亿元；同比为发布值（一位小数）。",
+    "price_basis": "名义值，未扣除价格因素",
+    "nominal": true,
+    "calendar_effect": "2026年中秋节为9月25日（2025年为10月6日，且与国庆连休）；2026年9月含中秋备货、2025年9月不含，日历错月会放大2026年9月烟酒类同比，单月增速不宜直接外推。"
+  },
+  "latest": {
+    "social_retail_total": {
+      "display_name": "社会消费品零售总额",
+      "period": "2026-09",
+      "month_value_yi": "42432.5",
+      "month_yoy_pct": 1.1,
+      "cum_value_yi": "370001.3",
+      "cum_period": "2026-01/2026-09",
+      "cum_yoy_pct": 1.1,
+      "prior_year_same_month_value_yi": "41971.0",
+      "prior_year_same_month_yoy_pct": 3.0,
+      "release_month_value_yi": 42433,
+      "release_cum_value_yi": 370001,
+      "level_implied_yoy_pct": 1.1,
+      "indicator_ids": {
+        "month_value": "M001625518",
+        "month_yoy": "M001625520",
+        "cum_value": "M001625519",
+        "cum_yoy": "M001625521"
+      },
+      "caliber": "全国月度社会消费品零售总额；含商品零售与餐饮收入；名义值，未扣除价格因素；当月值单位为亿元。",
+      "prior_year_cum_value_yi": "365877.0",
+      "prior_year_cum_yoy_pct": 4.5
+    },
+    "tobacco_alcohol_retail": {
+      "display_name": "限额以上单位烟酒类零售额",
+      "period": "2026-09",
+      "month_value_yi": "662.6",
+      "month_yoy_pct": 13.8,
+      "cum_value_yi": "5105.4",
+      "cum_period": "2026-01/2026-09",
+      "cum_yoy_pct": 12.6,
+      "prior_year_same_month_value_yi": "614.8",
+      "prior_year_same_month_yoy_pct": 1.6,
+      "release_month_value_yi": 663,
+      "release_cum_value_yi": 5105,
+      "level_implied_yoy_pct": 7.77,
+      "indicator_ids": {
+        "month_value": "M003015106",
+        "month_yoy": "M003015108",
+        "cum_value": "S000055120",
+        "cum_yoy": "M003015109"
+      },
+      "caliber": "国家统计局“2026年9月份社会消费品零售总额主要数据”表中，烟酒类列于“其中：限额以上单位商品零售额”之下，即限额以上单位商品零售额中的烟酒类；含烟草制品与酒类，不含餐饮收入；名义值，未扣除价格因素。",
+      "prior_year_cum_value_yi": "4808",
+      "prior_year_cum_yoy_pct": 4.0,
+      "release_prior_year_same_month_value_yi": 615
+    }
+  },
+  "checks": [
+    {
+      "name": "iFinD 与发布稿的取整一致性",
+      "result": "pass",
+      "detail": "42,432.5→42,433；370,001.3→370,001；662.6→663；5,105.4→5,105。四舍五入后与发布稿完全一致。"
+    },
+    {
+      "name": "社零当月同比水平复算",
+      "result": "pass",
+      "detail": "42,432.5 ÷ 41,971.0 − 1 = +1.10%，与发布同比 +1.1% 一致。"
+    },
+    {
+      "name": "烟酒类当月同比水平复算",
+      "result": "not_reproducible_by_design",
+      "detail": "662.6 ÷ 614.8 − 1 = +7.77%，与发布同比 +13.8% 相差 6.03 个百分点。原因是发布同比按可比口径计算：限额以上单位统计范围每年调整，计算同比所用同期数与本期的企业（单位、个体户）统计范围一致，国家统计局附注明确提示“和上年公布的数据存在口径差异”。应以发布同比 +13.8% 为准，不能用两期公布当月值复算。"
+    },
+    {
+      "name": "发布稿交叉核对",
+      "result": "pass",
+      "detail": "国家统计局 2026-10-19 10:00 发布稿：9月社零 42,433 亿元、同比 +1.1%；1—9月 370,001 亿元、+1.1%；烟酒类 9月 663 亿元、+13.8%；1—9月 5,105 亿元、+12.6%。与 iFinD EDB 一致（仅取整差异）。"
+    },
+    {
+      "name": "上年同期基数核对",
+      "result": "pass",
+      "detail": "iFinD EDB 2025年9月：社零当月值 41,971.0 亿元、同比 +3.0%，与国家统计局 2025-10-20 发布稿的 41,971 亿元、+3.0% 一致；烟酒类当月值 614.8 亿元，与发布稿 615 亿元一致（取整），同比 +1.6% 与发布稿一致。2025年1—9月烟酒类累计 4,808 亿元、+4.0%（发布稿）；按 2026 年发布同比反推的 2025 年可比基数约 582 亿元（当月）、4,534 亿元（累计），分别比 2025 年公布水平低约 5.3%、5.7%，与统计范围调整的解释一致。"
+    }
+  ],
+  "caliber_notes": {
+    "social_retail_total": "国家统计局定义：社会消费品零售总额指企业（单位、个体户）通过交易售给个人、社会集团非生产、非经营用的实物商品金额，以及提供餐饮服务所取得的收入金额。",
+    "above_designated_size": "限额以上单位指年主营业务收入 2000 万元及以上的批发业企业（单位、个体户）、500 万元及以上的零售业企业（单位、个体户）、200 万元及以上的住宿和餐饮业企业（单位、个体户）。",
+    "yoy_comparable_basis": "由于限额以上批发和零售业、住宿和餐饮业企业（单位、个体户）范围每年发生变化，为保证本年数据与上年可比，计算限额以上单位消费品零售额等各项指标同比增长速度所采用的同期数与本期的企业（单位、个体户）统计范围相一致，和上年公布的数据存在口径差异。",
+    "table_nominal_note": "国家统计局发布稿表注：此表数据均为未扣除价格因素的名义增速。"
+  },
+  "usage": {
+    "significance": {
+      "social_retail_total": "社零总额是白酒终端需求所处的消费大盘，9月同比 +1.1%、1—9月 +1.1%，显示总量消费仍偏温和，白酒的相对景气需结合烟酒分项与酒企自身动销数据判断。",
+      "tobacco_alcohol_retail": "限额以上单位烟酒类零售额是与白酒终端动销最接近的月度公开指标，9月同比 +13.8%（1—9月 +12.6%），较2025年9月的 +1.6% 明显提速，显示限额以上渠道烟酒零售改善，对白酒四季度旺季需求预期偏正面。"
+    },
+    "not_directly_concluded": {
+      "social_retail_total": "社零含汽车、餐饮、网上实物商品等，且为未扣价格的名义值，白酒在其中占比很小，不能由社零增速直接推导白酒需求、销量或酒企营收。",
+      "tobacco_alcohol_retail": "该口径含烟草制品及啤酒、葡萄酒等全部酒种，仅覆盖限额以上零售单位，且为未扣价格的名义零售额，不能直接等同于白酒销量、吨价、渠道库存或上市酒企营收增速；9月同比还受中秋错月放大（2026年中秋9月25日、2025年10月6日）。"
+    }
+  },
+  "sources": [
+    {
+      "id": "nbs-release-2026-09",
+      "type": "official_release",
+      "title": "2026年1—9月份社会消费品零售总额增长1.1%",
+      "publisher": "国家统计局",
+      "published_at": "2026-10-19T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html",
+      "local_file": "tmp/nbs_202609.html",
+      "sha256": "9ddbe220f5c0b47c624ab3cd56ee2225b372d4d3e6e09b0c5adc5c65f7caf47b",
+      "used_for": "当月值、累计值、同比、口径定义与可比口径附注"
+    },
+    {
+      "id": "nbs-release-2025-09",
+      "type": "official_release",
+      "title": "2025年9月份社会消费品零售总额增长3.0%",
+      "publisher": "国家统计局",
+      "published_at": "2025-10-20T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202510/t20251020_1961606.html",
+      "local_file": "tmp/nbs_202509.html",
+      "sha256": "9155b7b20057caa7193bb89ad706c98f0fb76381912ba132c80db61abb285a66",
+      "used_for": "上年同月/累计基数与限额以上口径交叉核对"
+    },
+    {
+      "id": "ifind-edb-monthly",
+      "type": "data_interface",
+      "server": "ifind",
+      "server_impl": "hexin-ifind-ds-mcp",
+      "tool": "fetch_edb",
+      "query": "社会消费品零售总额:当月值 与 社会消费品零售总额:当月同比，时间范围2025年1月至2026年9月",
+      "called_at": "2026-11-03T12:22:02+08:00",
+      "finished_at": "2026-11-03T12:22:06+08:00",
+      "indicator_ids": [
+        "M001625518",
+        "M001625520"
+      ],
+      "raw_file": "data/raw/ifind/edb_social_retail.json",
+      "sha256": "220a871f977328ae618074e879edaad14205b3779e031467fa55f33a117cc8f3"
+    },
+    {
+      "id": "ifind-edb-tobacco-month-value",
+      "type": "data_interface",
+      "server": "ifind",
+      "server_impl": "hexin-ifind-ds-mcp",
+      "tool": "fetch_edb",
+      "query": "烟酒类商品零售类值:当月值，时间范围2025年1月至2026年9月",
+      "called_at": "2026-11-03T12:22:21+08:00",
+      "finished_at": "2026-11-03T12:22:24+08:00",
+      "indicator_ids": [
+        "M003015106"
+      ],
+      "raw_file": "data/raw/ifind/edb_tobacco_alcohol_value.json",
+      "sha256": "3af1ac61f663a16228af6eaef8526939ba419981dc025e6b11699d0e6066546c"
+    },
+    {
+      "id": "ifind-edb-tobacco-yoy",
+      "type": "data_interface",
+      "server": "ifind",
+      "server_impl": "hexin-ifind-ds-mcp",
+      "tool": "fetch_edb",
+      "query": "烟酒类商品零售类值:当月值 与 烟酒类商品零售类值:当月同比，时间范围2025年1月至2026年9月",
+      "called_at": "2026-11-03T12:22:07+08:00",
+      "finished_at": "2026-11-03T12:22:08+08:00",
+      "indicator_ids": [
+        "M003015108"
+      ],
+      "raw_file": "data/raw/ifind/edb_tobacco_alcohol.json",
+      "sha256": "3d857c4df9d5925fe3c01d043cd3c88bfa71e59a870a747be550b72a20c8acbf"
+    },
+    {
+      "id": "ifind-edb-social-cum",
+      "type": "data_interface",
+      "server": "ifind",
+      "server_impl": "hexin-ifind-ds-mcp",
+      "tool": "fetch_edb",
+      "query": "社会消费品零售总额:累计值 与 社会消费品零售总额:累计同比，2026年9月",
+      "called_at": "2026-11-03T12:25:19+08:00",
+      "finished_at": "2026-11-03T12:25:24+08:00",
+      "indicator_ids": [
+        "M001625519",
+        "M001625521"
+      ],
+      "raw_file": "data/raw/ifind/edb_social_retail_cum_202609.json",
+      "sha256": "e6b42d837dc828719a8ba0a8533f033f236bd89aa0696b70ae4862c3aaeeff4a"
+    },
+    {
+      "id": "ifind-edb-tobacco-cum",
+      "type": "data_interface",
+      "server": "ifind",
+      "server_impl": "hexin-ifind-ds-mcp",
+      "tool": "fetch_edb",
+      "query": "烟酒类商品零售类值:累计同比 与 零售额:烟酒类:累计值，2026年9月",
+      "called_at": "2026-11-03T12:25:50+08:00",
+      "finished_at": "2026-11-03T12:25:55+08:00",
+      "indicator_ids": [
+        "M003015109",
+        "S000055120"
+      ],
+      "raw_file": "data/raw/ifind/edb_tobacco_alcohol_cum_202609.json",
+      "sha256": "bcc230ecedc783dd16432e66c68628f2f1c19f08b2a37a9238b53255c57546ed"
+    },
+    {
+      "id": "news-2025-09-release",
+      "type": "news_cross_check",
+      "title": "国家统计局：9月份社会消费品零售总额41971亿元，同比增长3.0%",
+      "publisher": "同花顺资讯（转引国家统计局）",
+      "published_at": "2025-10-20",
+      "url": "http://news.10jqka.com.cn/19700121/c671848551.shtml",
+      "called_at": "2026-11-03T12:24:18+08:00",
+      "raw_file": "data/raw/ifind/news_retail_202509.json",
+      "sha256": "e37aa6d0229378a085893643e3502ac0f1853df264086d59a257cf1b556e12e7"
+    }
+  ]
+}
