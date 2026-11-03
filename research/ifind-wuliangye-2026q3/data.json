@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "五粮液 2026 年三季报 iFinD 晨会速览卡",
+    "purpose": "按工单提取五粮液最新价、市盈率TTM、最新已披露财报期营业收入与归母净利润及同比增速，供人工复核与晨会使用。",
+    "prepared_at": "2026-11-03T12:18:00+08:00",
+    "data_retrieval_window": "2026-11-03T12:13:00+08:00/2026-11-03T12:17:00+08:00",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "display_unit": "亿元",
+    "rounding": "亿元显示值四舍五入两位小数；同比按原始金额全精度计算后四舍五入两位；价格、涨跌幅、市盈率显示两位小数。",
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）",
+    "disclaimer": "研究底稿，仅整理公开数据，不含盈利预测、估值判断或投资建议。"
+  },
+  "company": {
+    "name": "宜宾五粮液股份有限公司",
+    "short_name": "五粮液",
+    "stock_code": "000858.SZ",
+    "exchange": "深圳证券交易所"
+  },
+  "market_snapshot": {
+    "as_of": "2026-11-03T12:12:48+08:00",
+    "as_of_label": "2026-11-03 12:12:48（Asia/Shanghai）",
+    "session": "午间休市快照；1 分钟线最新成交 11:30，收盘价 75.17 元与快照一致",
+    "price_cny_per_share": 75.17,
+    "change_pct": 1.24,
+    "change_pct_raw": 1.2390572390572414,
+    "prev_close_cny": 74.25,
+    "pe_ttm": 23.94,
+    "pe_ttm_raw": 23.9353591,
+    "total_market_cap_cny": "291780473735.85",
+    "source_tool": "security_highfreq_quotes(data_mode=real_time)",
+    "note": "涨跌幅、市盈率与最新价来自同一实时快照；iFinD 提示日频行情/估值在收盘后 15:05–15:15 更新，故未采用午间日频估值（23.6424 倍，对应昨收 74.25 元）。"
+  },
+  "report": {
+    "title": "五 粮 液：2026年三季度报告",
+    "report_type": "第三季度报告",
+    "period": "2026 年前三季度（2026-01-01 至 2026-09-30）",
+    "single_quarter": "2026 年第三季度（2026-07-01 至 2026-09-30）",
+    "comparative_period": "2025 年前三季度 / 2025 年第三季度",
+    "disclosure_date": "2026-10-28",
+    "audited": false,
+    "announcement_check": "iFinD search_notice 返回《五 粮 液：2026年三季度报告》，日期 2026-10-28；公告片段列示的元级金额与 iFinD 结构化接口一致。"
+  },
+  "formulas": {
+    "display_yi": "原始金额（元）÷ 100,000,000，四舍五入两位小数",
+    "yoy_percent": "（本期金额 − 上年同期金额）÷ |上年同期金额| × 100%",
+    "pe_ttm": "总市值 ÷ 最近四个季度归母净利润（iFinD 实时返回 23.9353591 倍）",
+    "example_revenue_yoy": "(32858473964.34 − 30637727654.97) ÷ 30637727654.97 × 100% = 7.2484%"
+  },
+  "metrics": {
+    "cumulative_2026_9m": {
+      "营业收入": {
+        "raw_cny": "32858473964.34",
+        "yi": 328.58,
+        "prior_raw_cny": "30637727654.97",
+        "prior_yi": 306.38,
+        "yoy_percent_calc": 7.2484,
+        "yoy_percent_ifind": 7.2484,
+        "yoy_percent_announcement": 7.25,
+        "caliber": "合并报表；累计口径（年初至报告期末）；工单所指“营业收入”；与营业总收入同额"
+      },
+      "营业总收入": {
+        "raw_cny": "32858473964.34",
+        "yi": 328.58,
+        "prior_raw_cny": "30637727654.97",
+        "prior_yi": 306.38,
+        "yoy_percent_calc": 7.2484,
+        "caliber": "合并利润表顶层项目；本公司无利息收入等项目，与营业收入相等"
+      },
+      "归母净利润": {
+        "raw_cny": "9710647471.03",
+        "yi": 97.11,
+        "prior_raw_cny": "6474551792.18",
+        "prior_yi": 64.75,
+        "yoy_percent_calc": 49.9818,
+        "yoy_percent_ifind": 49.9818,
+        "yoy_percent_announcement": 49.98,
+        "caliber": "归属于上市公司股东的净利润；合并报表；累计口径；非扣非"
+      },
+      "扣非归母净利润_备查": {
+        "raw_cny": "9440688403.06",
+        "yoy_percent_announcement": 46.18,
+        "caliber": "扣除非经常性损益后；公告片段列示，本稿未采用"
+      }
+    },
+    "single_quarter_2026q3": {
+      "营业收入": {
+        "raw_cny": "4441799422.57",
+        "yi": 44.42,
+        "prior_raw_cny": "7127760000",
+        "prior_yi": 71.28,
+        "prior_precision_note": "2025Q3 单季由 iFinD 亿元显示值 71.2776 亿元换算，万元级精度",
+        "yoy_percent_calc": -37.6831,
+        "yoy_percent_ifind": -37.6831,
+        "yoy_percent_announcement": -37.68,
+        "caliber": "2026 年 7–9 月单季；合并报表"
+      },
+      "归母净利润": {
+        "raw_cny": "957704479.72",
+        "yi": 9.58,
+        "prior_raw_cny": "1850700000",
+        "prior_yi": 18.51,
+        "prior_precision_note": "2025Q3 单季由 iFinD 亿元显示值 18.5070 亿元换算，万元级精度",
+        "yoy_percent_calc": -48.2518,
+        "yoy_percent_ifind": -48.2518,
+        "yoy_percent_announcement": -48.25,
+        "caliber": "2026 年 7–9 月单季；归属于上市公司股东的净利润；合并报表"
+      }
+    }
+  },
+  "context": {
+    "prior_year_9m_yoy": {
+      "营业收入": -54.8885,
+      "归母净利润": -74.0299,
+      "source": "iFinD get_security_indicators（2025 年三季报），解读用低基数背景"
+    }
+  },
+  "limitations": [
+    "iFinD 接口不返回公告原文页码/全文 URL，无法按“原文页码”标注；以报告期、报表类型、接口字段定位。",
+    "2026 年三季报未经审计；公告仅通过 iFinD 语义检索片段核对，未下载全文。",
+    "2025Q3 单季基数为 iFinD 亿元显示值换算，万元级精度，不影响两位小数结论。",
+    "累计同比与单季同比方向相反，引用时须注明口径。",
+    "本稿仅整理公开数据，不含盈利预测、估值判断或投资建议。"
+  ]
+}
