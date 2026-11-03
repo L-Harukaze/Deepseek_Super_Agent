@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "primary_source": {
+    "type": "同花顺 iFinD MCP 数据接口",
+    "server_name": "ifind",
+    "server_url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-mcp",
+    "protocol": "MCP streamable-http, JSON-RPC 2.0",
+    "transport_note": "通过本机 DSH 配置的 MCP 客户端直连；鉴权凭据不写入本底稿。",
+    "retrieval_window": "2026-11-03T12:19:15+08:00/2026-11-03T12:21:31+08:00",
+    "market_data_time": "2026-11-03 11:30（上午收盘；午间休市期间 12:19–12:20 的快照价格与 11:30 收盘一致）",
+    "timezone": "Asia/Shanghai"
+  },
+  "tool_calls": [
+    {
+      "tool": "security_highfreq_quotes",
+      "purpose": "白酒Ⅱ成分股实时快照（第一组 10 只）",
+      "arguments": {
+        "market": "A股",
+        "symbols": "600519.SH,000858.SZ,000568.SZ,600809.SH,002304.SZ,000596.SZ,603369.SH,603198.SH,603589.SH,600702.SH",
+        "indicators": "最新价,涨跌幅,成交额,成交量",
+        "data_mode": "real_time"
+      },
+      "called_at": "2026-11-03T12:19:55+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/quotes_a.json",
+      "key_outputs": {
+        "constituents": 10,
+        "latest_quote_time_range": "2026-11-03 12:19:15–12:19:55",
+        "sum_amount_cny": "10721067965.52"
+      }
+    },
+    {
+      "tool": "security_highfreq_quotes",
+      "purpose": "白酒Ⅱ成分股实时快照（第二组 9 只）",
+      "arguments": {
+        "market": "A股",
+        "symbols": "000799.SZ,600779.SH,600559.SH,600199.SH,600197.SH,603919.SH,000860.SZ,000995.SZ,002646.SZ",
+        "indicators": "最新价,涨跌幅,成交额,成交量",
+        "data_mode": "real_time"
+      },
+      "called_at": "2026-11-03T12:20:03+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/quotes_b.json",
+      "key_outputs": {
+        "constituents": 9,
+        "latest_quote_time_range": "2026-11-03 12:19:18–12:19:57",
+        "sum_amount_cny": "1965896221.83"
+      }
+    },
+    {
+      "tool": "security_highfreq_quotes",
+      "purpose": "申万白酒Ⅱ指数实时快照",
+      "arguments": {
+        "market": "指数",
+        "symbols": "801125.SL",
+        "indicators": "最新价,涨跌幅,成交额,成交量,上涨家数,下跌家数",
+        "data_mode": "real_time"
+      },
+      "called_at": "2026-11-03T12:20:09+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/index.json",
+      "key_outputs": {
+        "last": "39779.84",
+        "change_pct": 1.1067651576247517,
+        "amount_cny": "12686964200",
+        "volume": "2440306",
+        "rise_count": 17,
+        "fall_count": 2,
+        "quote_time": "2026-11-03 12:20:00"
+      }
+    },
+    {
+      "tool": "security_highfreq_quotes",
+      "purpose": "申万白酒Ⅱ指数 15 分钟高频序列，用于确认上午收盘时点与成交额",
+      "arguments": {
+        "market": "指数",
+        "symbols": "801125.SL",
+        "indicators": "收盘价,成交额",
+        "data_mode": "highfreq",
+        "interval": 15
+      },
+      "called_at": "2026-11-03T12:21:31+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/index_intraday15.json",
+      "key_outputs": {
+        "bar_count": 8,
+        "last_bar": "2026-11-03 11:30 收盘价 39779.84 成交额 908979300",
+        "sum_bar_amount_cny": "12686964200"
+      }
+    },
+    {
+      "tool": "search_news",
+      "purpose": "白酒行业近一周新闻语义检索",
+      "arguments": {
+        "query": "白酒行业 白酒板块 行业动态 批价 库存 政策",
+        "time_start": "2026-10-27",
+        "time_end": "2026-11-03",
+        "size": 15
+      },
+      "called_at": "2026-11-03T12:20:15+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/news.json",
+      "key_outputs": {
+        "returned_items": 10,
+        "in_window_items": [
+          "茅台重回1400，白酒的底已现？ | 2026-11-02 | https://finance.sina.com.cn/wm/2026-11-02/doc-inixkeuv9230972.shtml",
+          "白酒板块逆市走强 19个交易日上涨近15% | 2026-11-03 | https://finance.ifeng.com/c/8xk5Xp2vMks",
+          "大跌之后，白酒现在是A股最好的资产？ | 2026-10-28 | https://news.qq.com/rain/a/20261028A02SYG00",
+          "库存出清持续推进 白酒行业进入磨底期 | 2026-11-03 | https://wap.eastmoney.com/a/202611033919177757.html",
+          "白酒批价旺季后回落，3Q26业绩分化 | 2026-10-28 | https://www.bilibili.com/video/BV15px76rEPg/"
+        ]
+      }
+    },
+    {
+      "tool": "search_notice",
+      "purpose": "白酒板块近一周公告语义检索",
+      "arguments": {
+        "query": "白酒板块上市公司 2026年第三季度报告 业绩",
+        "time_start": "2026-10-27",
+        "time_end": "2026-11-03",
+        "size": 10
+      },
+      "called_at": "2026-11-03T12:20:48+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/notice.txt",
+      "key_outputs": {
+        "liquor_announcements": [
+          "泸州老窖：2026年三季度报告 | 2026-10-30 | Q3 归母净利润 1,331,795,155.20 元（-57.03%），前三季度 5,671,059,241.53 元（-47.31%）"
+        ],
+        "note": "其余返回项为基金季报或非白酒公司公告（广州酒家），未采用。"
+      }
+    },
+    {
+      "tool": "search_trending_news",
+      "purpose": "食品饮料行业近一周热门资讯（辅助）",
+      "arguments": {
+        "time_scope": "近一周",
+        "industry_name": "食品饮料",
+        "keyword": "白酒",
+        "size": 10
+      },
+      "called_at": "2026-11-03T12:20:23+08:00",
+      "raw_file": "data/raw/ifind-liquor-20261103/trending.json",
+      "key_outputs": {
+        "returned_items": 1,
+        "content": "百润股份：白酒啤酒都在减产，它的收入涨了一成 | 证券之星",
+        "used": false,
+        "reason": "与白酒板块行情/要闻不直接相关，未采用。"
+      }
+    }
+  ],
+  "news_sources": [
+    {
+      "rank": 1,
+      "type": "公告",
+      "title": "泸州老窖：2026年三季度报告",
+      "date": "2026-10-30",
+      "source": "泸州老窖公告（iFinD search_notice 检索）",
+      "url": null,
+      "retrieved_via": "iFinD search_notice",
+      "source_note": "iFinD 公告检索不返回公告原文 URL 或页码；标题、日期与净利润片段来自接口返回。"
+    },
+    {
+      "rank": 2,
+      "type": "行业新闻",
+      "title": "库存出清持续推进 白酒行业进入磨底期",
+      "date": "2026-11-03",
+      "source": "证券日报（东方财富网转载）",
+      "url": "https://wap.eastmoney.com/a/202611033919177757.html",
+      "retrieved_via": "iFinD search_news",
+      "source_note": "iFinD 不返回媒体名；正文含“（文章来源：证券日报）”及“原标题：库存出清持续推进 白酒行业进入磨底期”，据此判定来源。"
+    },
+    {
+      "rank": 3,
+      "type": "行业新闻",
+      "title": "白酒板块逆市走强 19个交易日上涨近15%",
+      "date": "2026-11-03",
+      "source": "凤凰网财经",
+      "url": "https://finance.ifeng.com/c/8xk5Xp2vMks",
+      "retrieved_via": "iFinD search_news",
+      "source_note": "iFinD 不返回媒体名；来源按 URL 域名 finance.ifeng.com 推断为凤凰网财经。"
+    }
+  ],
+  "limitations": [
+    "行情为 2026-11-03 上午收盘（11:30）口径；13:00 后另有下午交易时段，全天数据会变化。",
+    "新闻/公告来源名称由 URL 域名或正文推断，iFinD 接口未返回独立媒体字段。",
+    "iFinD 公告检索不返回公告原文 URL 或页码；泸州老窖三季报仅核对到归母净利润片段。",
+    "新闻中的批价、库存、机构预测均为媒体转述，本底稿未独立复核。",
+    "指数成交量字段接口未标注单位，未换算为手/股。"
+  ]
+}
