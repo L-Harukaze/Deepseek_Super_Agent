@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "白酒晨会简报与数据附表（2026-11-03）——来源索引",
+    "as_of": "2026-11-03T12:45:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "note": "本简报未重新调用 iFinD；来源为 2026-11-03 已交付的五份前序底稿。下列提交为各前序分支在汇总时的 HEAD。"
+  },
+  "prior_deliveries": [
+    {
+      "pr": 6,
+      "url": "https://github.com/L-Harukaze/Deepseek_Super_Agent/pull/6",
+      "title": "新增泸州老窖 2026 年三季报 iFinD 晨会速览卡",
+      "branch": "agent/ifind-luzhou-morning-9e3ccce5da50",
+      "commit": "c6c9948876bf05db79b9737a82f2826da2c3a799",
+      "workpaper_dir": "research/ifind-luzhou-2026q3/",
+      "used_for": "泸州老窖最新价、PE TTM、2026 三季报营收/归母及同比、Q3 单季补充、当日涨跌幅（卡面未列示但底稿有记录）",
+      "data_time": "行情快照 2026-11-03 12:15:15；财务取数 2026-11-03 12:14–12:15；报告期 2026-09-30；公告披露 2026-10-30"
+    },
+    {
+      "pr": 7,
+      "url": "https://github.com/L-Harukaze/Deepseek_Super_Agent/pull/7",
+      "title": "Add Wuliangye 2026Q3 iFinD morning snapshot",
+      "branch": "agent/ifind-wuliangye-morning-6c26796240d8",
+      "commit": "9d2ae190554f759462c107c3279ec62eb04eaf1a",
+      "workpaper_dir": "research/ifind-wuliangye-2026q3/",
+      "used_for": "五粮液最新价、PE TTM、2026 三季报营收/归母及同比、Q3 单季、2025 低基数背景",
+      "data_time": "行情快照 2026-11-03 12:12:48；财务取数 2026-11-03 12:13–12:17；报告期 2026-09-30；公告披露 2026-10-28"
+    },
+    {
+      "pr": 8,
+      "url": "https://github.com/L-Harukaze/Deepseek_Super_Agent/pull/8",
+      "title": "Add iFinD Shenwan liquor sector snapshot and weekly news (2026-11-03)",
+      "branch": "agent/ifind-liquor-sector-18b6596118dc",
+      "commit": "ae09c302a70c3a30719bf0c43387f5ae03a6f82d",
+      "workpaper_dir": "research/ifind-liquor-sector-20261103/",
+      "used_for": "申万白酒Ⅱ板块行情、19 只成分股、领涨/领跌、近一周 3 条资讯、三家公司行情交叉核对",
+      "data_time": "行情 2026-11-03 11:30（上午收盘）；快照取数 2026-11-03 12:19–12:22；新闻区间 2026-10-27 至 2026-11-03"
+    },
+    {
+      "pr": 9,
+      "url": "https://github.com/L-Harukaze/Deepseek_Super_Agent/pull/9",
+      "title": "Add Moutai 2026Q3 iFinD morning card",
+      "branch": "agent/ifind-moutai-morning-cddda25d9556",
+      "commit": "093f9771a6139b2bbeca34f7f5212a7d77b81aba",
+      "workpaper_dir": "research/ifind-moutai-morning-20261103/",
+      "used_for": "贵州茅台最新价、PE TTM、2026 三季报营业收入/归母及同比、营业总收入参考口径、Q3 单季补充",
+      "data_time": "行情快照 2026-11-03 12:14:53；财务取数 2026-11-03 12:15:34；报告期 2026-09-30；公告披露 2026-10-31"
+    },
+    {
+      "pr": 10,
+      "url": "https://github.com/L-Harukaze/Deepseek_Super_Agent/pull/10",
+      "title": "Add 2026-09 retail sales and tobacco/alcohol iFinD note",
+      "branch": "agent/ifind-retail-data-48bc124d90c0",
+      "commit": "94894105e8d15b9ae16ed83b20474616b2e31935",
+      "workpaper_dir": "research/ifind-retail-202609/",
+      "used_for": "2026-09 社零与限额以上烟酒类零售额、可比口径说明、水平复算差异、中秋错月、最新数据期",
+      "data_time": "数据期 2026-09（国家统计局 2026-10-19 发布）；取数 2026-11-03 12:21–12:26"
+    }
+  ],
+  "ifind": {
+    "server": "ifind",
+    "server_impl": "hexin-ifind-ds-mcp",
+    "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-mcp",
+    "protocol": "MCP streamable-http, JSON-RPC 2.0",
+    "tools_used_by_prior_workpapers": [
+      {
+        "tool": "security_highfreq_quotes",
+        "used_for": "三家公司最新价、涨跌幅、PE TTM；1 分钟/15 分钟高频校验",
+        "data_modes": ["real_time", "highfreq"]
+      },
+      {
+        "tool": "get_security_indicators",
+        "used_for": "三家公司 2026 三季报营收、归母净利润及同比；上年同期与单季指标",
+        "report_type": "合并报表",
+        "period": "最新一期 MRQ / 2025 三季报"
+      },
+      {
+        "tool": "search_notice",
+        "used_for": "三家公司 2026 三季报公告标题、日期与金额片段核对；不返回原文 URL/页码",
+        "limitation": "只返回标题、日期与片段"
+      },
+      {
+        "tool": "search_news",
+        "used_for": "近一周白酒行业资讯标题、日期、URL 与片段",
+        "limitation": "不返回媒体名称，来源按 URL 域名与正文推断"
+      },
+      {
+        "tool": "fetch_edb",
+        "used_for": "社零与烟酒类月度指标",
+        "indicator_ids": ["M001625518", "M001625520", "M003015106", "M003015108", "M001625519", "M001625521", "S000055120", "M003015109"]
+      },
+      {
+        "tool": "get_stock_summary",
+        "used_for": "五粮液日频估值交叉核对（未用于最终卡片）",
+        "note": "午间日频为昨收口径"
+      }
+    ]
+  },
+  "announcements": [
+    {
+      "title": "贵州茅台：贵州茅台2026年第三季度报告",
+      "company": "贵州茅台",
+      "date": "2026-10-31",
+      "audited": false,
+      "retrieved_via": "iFinD search_notice",
+      "used_for": "2026 前三季度营业收入 130,970,743,649.04 元、归母净利润 64,467,425,981.95 元及同比；营业总收入 133,283,652,508.95 元；Q3 单季金额"
+    },
+    {
+      "title": "五 粮 液：2026年三季度报告",
+      "company": "五粮液",
+      "date": "2026-10-28",
+      "audited": false,
+      "retrieved_via": "iFinD search_notice",
+      "used_for": "2026 前三季度营业收入 32,858,473,964.34 元、归母净利润 9,710,647,471.03 元及同比；Q3 单季金额"
+    },
+    {
+      "title": "泸州老窖：2026年三季度报告",
+      "company": "泸州老窖",
+      "date": "2026-10-30",
+      "audited": false,
+      "retrieved_via": "iFinD search_notice",
+      "used_for": "2026 前三季度营业收入 14,667,616,562.73 元、归母净利润 5,671,059,241.53 元及同比；Q3 单季归母 1,331,795,155.20 元"
+    }
+  ],
+  "news": [
+    {
+      "rank": 1,
+      "type": "公告",
+      "title": "泸州老窖：2026年三季度报告",
+      "date": "2026-10-30",
+      "source": "泸州老窖公告（iFinD search_notice）",
+      "url": null,
+      "verification": "标题、日期与 Q3 归母金额来自 iFinD 公告片段；未取得原文 URL/页码"
+    },
+    {
+      "rank": 2,
+      "type": "行业新闻",
+      "title": "库存出清持续推进 白酒行业进入磨底期",
+      "date": "2026-11-03",
+      "source": "证券日报（东方财富网转载）",
+      "url": "https://wap.eastmoney.com/a/202611033919177757.html",
+      "verification": "iFinD search_news 返回标题、日期、URL 与片段；媒体名称按 URL 域名及正文推断，未独立核全文"
+    },
+    {
+      "rank": 3,
+      "type": "行业新闻",
+      "title": "白酒板块逆市走强 19个交易日上涨近15%",
+      "date": "2026-11-03",
+      "source": "凤凰网财经",
+      "url": "https://finance.ifeng.com/c/8xk5Xp2vMks",
+      "verification": "iFinD search_news 返回标题、日期、URL 与片段；媒体名称按 URL 域名推断，未独立核全文"
+    }
+  ],
+  "statistics": [
+    {
+      "id": "nbs-2026-09-social-retail",
+      "publisher": "国家统计局",
+      "title": "2026年1—9月份社会消费品零售总额增长1.1%",
+      "published_at": "2026-10-19T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html",
+      "used_for": "2026-09 社零 42,433 亿元/+1.1%、1–9 月 370,001 亿元/+1.1%；烟酒类 663 亿元/+13.8%、1–9 月 5,105 亿元/+12.6%；口径附注"
+    },
+    {
+      "id": "nbs-2025-09-social-retail",
+      "publisher": "国家统计局",
+      "title": "2025年9月份社会消费品零售总额增长3.0%",
+      "published_at": "2025-10-20T10:00:00+08:00",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202510/t20251020_1961606.html",
+      "used_for": "上年同月基数核对：社零 41,971 亿元/+3.0%；烟酒类 615 亿元/+1.6%"
+    }
+  ],
+  "cross_checks": [
+    {
+      "name": "三家公司行情与板块成分股表",
+      "detail": "茅台 1,457.66/+1.29%、五粮液 75.17/+1.24%、泸州老窖 80.51/+0.93%，与 PR #8 的 19 只成分股表逐项一致"
+    },
+    {
+      "name": "板块成交额",
+      "detail": "19 只成分股成交额合计 12,686,964,187.35 元，指数快照 12,686,964,200 元，差 12.65 元"
+    },
+    {
+      "name": "板块涨跌家数",
+      "detail": "逐只统计 17 涨 2 跌，与指数快照 riseCount=17、fallCount=2 一致"
+    },
+    {
+      "name": "宏观取整",
+      "detail": "iFinD EDB 42,432.5→42,433；370,001.3→370,001；662.6→663；5,105.4→5,105，与统计局发布稿一致"
+    },
+    {
+      "name": "烟酒类水平复算差异",
+      "detail": "662.6÷614.8−1=+7.77%，与发布同比 +13.8% 差 6.03pct；按可比口径解释，不据此改写发布值"
+    },
+    {
+      "name": "简报字数",
+      "detail": "正文 428 字、含表题 488 字（非空白字符，表格行不计）；calc.py 断言 ≤500 且与 meta 记录一致"
+    }
+  ],
+  "limitations": [
+    "本简报未重新调用 iFinD，数值与数据时间均取自前序已交付底稿；若午后行情、公告更正或数据商调整，需重新取数。",
+    "三家公司 2026 年三季报均未经审计。",
+    "iFinD 公告检索不返回公告原文页码/全文 URL，未下载三季报全文。",
+    "新闻接口只返回标题、日期、URL 与片段，媒体名称按域名推断；批价、库存与机构观点未独立核实。",
+    "2026 年 10 月社零尚未发布；板块仅有 11:30 上午收盘数据。",
+    "本稿仅整理公开数据，不含盈利预测、估值判断或投资建议。"
+  ]
+}
