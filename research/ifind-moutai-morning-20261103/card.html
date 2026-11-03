@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>贵州茅台 晨会速览卡</title>
+<style>
+  :root {
+    --ink: #14201b;
+    --muted: #66736c;
+    --line: #dfe6e1;
+    --green: #0b3d2e;
+    --green-2: #14543f;
+    --gold: #c9a227;
+    --up: #c0392b;
+    --down: #1e7a46;
+    --paper: #f3f6f3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 900px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .card {
+    width: 840px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(11, 61, 46, 0.18);
+    border: 1px solid rgba(11, 61, 46, 0.08);
+  }
+  .top {
+    background: linear-gradient(135deg, #0b3d2e 0%, #14543f 62%, #1b634b 100%);
+    color: #fff;
+    padding: 34px 42px 30px;
+    position: relative;
+  }
+  .top::after {
+    content: "";
+    position: absolute;
+    right: -40px; top: -60px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,162,39,0.20), rgba(201,162,39,0) 68%);
+  }
+  .brandline {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 15px; letter-spacing: 1px; color: #d9e7df;
+  }
+  .brandline b { color: #f4e7b8; font-weight: 600; letter-spacing: 2px; }
+  .title {
+    margin-top: 18px;
+    font-size: 34px; font-weight: 700; letter-spacing: 4px;
+  }
+  .subtitle {
+    margin-top: 8px; font-size: 14px; color: #bfd3c7; letter-spacing: 0.5px;
+  }
+  .hero {
+    display: grid; grid-template-columns: 1.25fr 0.75fr;
+    gap: 28px; padding: 34px 42px 26px;
+    border-bottom: 1px solid var(--line);
+  }
+  .label { font-size: 14px; color: var(--muted); letter-spacing: 1px; }
+  .price {
+    margin-top: 8px; font-size: 64px; line-height: 1;
+    font-weight: 700; letter-spacing: -1px;
+    font-variant-numeric: tabular-nums;
+  }
+  .price small { font-size: 24px; font-weight: 500; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+  .change-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+  .chip {
+    display: inline-flex; align-items: center;
+    padding: 6px 12px; border-radius: 999px;
+    font-size: 15px; font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .chip.up { color: var(--up); background: #fbecea; }
+  .chip.down { color: var(--down); background: #e9f5ee; }
+  .asof { font-size: 13px; color: var(--muted); }
+  .hero-right {
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
+  }
+  .stat .k { font-size: 13px; color: var(--muted); letter-spacing: 0.5px; }
+  .stat .v { margin-top: 4px; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat .v span { font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+  .section { padding: 26px 42px 8px; }
+  .section-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .section-title { font-size: 21px; font-weight: 700; letter-spacing: 0.5px; }
+  .section-title .accent { color: var(--gold); }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .tag {
+    font-size: 12px; color: var(--green);
+    background: #edf4ef; border: 1px solid #d8e5dc;
+    padding: 4px 9px; border-radius: 6px;
+  }
+  .metric-table { margin-top: 16px; border-top: 1px solid var(--line); }
+  .metric-row {
+    display: grid; grid-template-columns: 1.35fr 1fr 0.65fr;
+    align-items: center; gap: 14px;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+  }
+  .metric-name { font-size: 17px; color: #26332c; }
+  .metric-name small { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); }
+  .metric-value { text-align: right; font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .metric-value span { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+  .metric-yoy { display: flex; justify-content: flex-end; }
+  .note {
+    margin: 18px 42px 0;
+    padding: 14px 16px;
+    background: #f7f9f7;
+    border: 1px solid #e3ebe5;
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    font-size: 13px; line-height: 1.7; color: #45524a;
+  }
+  .note b { color: #1f2e26; }
+  .footer {
+    margin-top: 22px;
+    padding: 20px 42px 24px;
+    background: #f6f8f6;
+    border-top: 1px solid var(--line);
+    color: #4f5d55;
+    font-size: 12px; line-height: 1.8;
+  }
+  .footer .row { display: flex; justify-content: space-between; gap: 18px; }
+  .footer .row + .row { margin-top: 4px; }
+  .footer b { color: #26332c; font-weight: 600; }
+  .fine { color: #7b877f; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="brandline">
+        <b>贵州茅台 · 600519.SH</b>
+        <span>2026年11月3日 · 星期二</span>
+      </div>
+      <div class="title">晨会速览卡</div>
+      <div class="subtitle">同花顺 iFinD 数据 · 行情为 11:30 上午收盘快照</div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="label">最新价</div>
+        <div class="price">1,457.66<small>元</small></div>
+        <div class="change-row">
+          <span class="chip up">+1.29%</span>
+          <span class="asof">前收 1,439.10 元 · 快照 12:14:53</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stat">
+          <div class="k">市盈率 TTM</div>
+          <div class="v">22.18<span>倍</span></div>
+        </div>
+        <div class="stat">
+          <div class="k">总市值</div>
+          <div class="v">18,221.94<span>亿元</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-title">2026 年三季报 <span class="accent">·</span> 累计口径</div>
+        <div class="tags">
+          <span class="tag">2026-09-30</span>
+          <span class="tag">2026-10-31 披露</span>
+          <span class="tag">合并报表</span>
+          <span class="tag">未经审计</span>
+        </div>
+      </div>
+      <div class="metric-table">
+        <div class="metric-row">
+          <div class="metric-name">营业收入<small>合并利润表“营业收入”，非营业总收入</small></div>
+          <div class="metric-value">1,309.71<span>亿元</span></div>
+          <div class="metric-yoy"><span class="chip up">同比 +1.96%</span></div>
+        </div>
+        <div class="metric-row">
+          <div class="metric-name">归母净利润<small>归属于上市公司股东的净利润</small></div>
+          <div class="metric-value">644.67<span>亿元</span></div>
+          <div class="metric-yoy"><span class="chip down">同比 -0.25%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>口径提示：</b>营业总收入 1,332.84 亿元（同比 +1.82%），比营业收入多 23.13 亿元，差额主要为利息收入等；本卡按用户所问“营业收入”列示，两个口径不混用。同比 =（本期 − 上年同期）÷ |上年同期| × 100%。<br><b>单季补充（2026Q3）：</b>营业收入 402.67 亿元（+3.08%），归母净利润 199.51 亿元（+3.78%）。
+    </div>
+
+    <div class="footer">
+      <div class="row">
+        <span><b>数据接口：</b>同花顺 iFinD MCP（security_highfreq_quotes / get_security_indicators / search_notice）</span>
+        <span><b>报告期：</b>2026-09-30</span>
+      </div>
+      <div class="row">
+        <span><b>数据时间：</b>行情快照 2026-11-03 12:14:53（最新价 = 11:30 上午收盘）；财务取数 12:15:34；公告核对 12:15:58–12:16:44</span>
+      </div>
+      <div class="row fine">
+        <span>PE(TTM) = 总市值 ÷ TTM 归母净利 821.61 亿元（原始金额复算 22.1784 倍）</span>
+        <span>仅整理公开数据，不构成投资建议</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
