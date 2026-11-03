@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "title": "泸州老窖 000568.SZ 晨会速览卡（iFinD）",
+    "purpose": "按工单提取泸州老窖最新价、市盈率TTM、最新财报期营业收入与归母净利润及各自同比增速，注明报告期、口径、数据接口与数据时间；供人工复核。",
+    "prepared_at": "2026-11-03T12:18:00+08:00",
+    "data_retrieval_window": "2026-11-03T12:12:00+08:00/2026-11-03T12:15:15+08:00",
+    "currency": "CNY",
+    "raw_amount_unit": "元",
+    "display_unit": "亿元",
+    "rounding": "亿元显示值四舍五入两位小数；同比按原始金额全精度计算后四舍五入两位小数。",
+    "raw_amount_encoding": "十进制字符串（避免 JSON 浮点精度损失）"
+  },
+  "company": {
+    "name": "泸州老窖股份有限公司",
+    "short_name": "泸州老窖",
+    "stock_code": "000568.SZ",
+    "exchange": "深圳证券交易所"
+  },
+  "quote": {
+    "latest_price": 80.51,
+    "latest_price_unit": "元/股",
+    "pe_ttm": 20.6473203,
+    "pe_ttm_display": 20.65,
+    "pe_ttm_unit": "倍",
+    "change_ratio_percent": 0.9276670427479117,
+    "amount_cny": "1037498377.53",
+    "total_market_value_cny": "118502786786.13",
+    "snapshot_time": "2026-11-03 12:15:15",
+    "snapshot_note": "午间休市快照，最新成交为上午收盘；数据来自 iFinD 实时行情接口。",
+    "source": "ifind security_highfreq_quotes, data_mode=real_time"
+  },
+  "report": {
+    "title": "泸州老窖：2026年三季度报告",
+    "announcement_no": "2026-36",
+    "report_type": "2026 年三季度报告",
+    "period": "2026-09-30",
+    "period_label": "2026 年前三季度（2026-01-01 至 2026-09-30）",
+    "comparative_period_label": "2025 年前三季度（2025-01-01 至 2025-09-30）",
+    "cumulative": true,
+    "scope": "合并报表",
+    "audited": false,
+    "disclosure_date": "2026-10-30",
+    "source": "ifind search_notice + get_security_indicators"
+  },
+  "metrics": {
+    "营业收入": {
+      "raw_cny": "14667616562.73",
+      "yi": 146.68,
+      "prior_raw_cny": "23127459902.13",
+      "prior_yi": 231.27,
+      "yoy_percent": -36.58,
+      "stated_yoy_percent": -36.58,
+      "recalculated_yoy_percent": -36.5792,
+      "note": "营业收入与营业总收入相同，均为 14,667,616,562.73 元；按合并利润表“营业收入”口径。"
+    },
+    "归母净利润": {
+      "raw_cny": "5671059241.53",
+      "yi": 56.71,
+      "prior_raw_cny": "10762394649.32",
+      "prior_yi": 107.62,
+      "yoy_percent": -47.31,
+      "stated_yoy_percent": -47.31,
+      "recalculated_yoy_percent": -47.3067,
+      "note": "归属于上市公司股东的净利润（归母口径），非合并报表净利润总额。"
+    }
+  },
+  "supplementary_single_quarter": {
+    "period": "2026Q3（2026-07-01 至 2026-09-30）",
+    "营业收入": {
+      "raw_cny": "4195391986.95",
+      "yi": 41.95,
+      "yoy_percent": -37.14
+    },
+    "归母净利润": {
+      "raw_cny": "1331795155.20",
+      "yi": 13.32,
+      "yoy_percent": -57.03
+    },
+    "note": "单季数据仅作口径补充，不作为速览卡主指标。"
+  },
+  "formulas": {
+    "display_yi": "原始金额（元）÷ 100,000,000",
+    "yoy_percent": "（本期原始金额 − 上年同期原始金额）÷ 上年同期原始金额 × 100%",
+    "revenue_yoy": "（14,667,616,562.73 − 23,127,459,902.13）÷ 23,127,459,902.13 × 100% = -36.5792%",
+    "net_profit_yoy": "（5,671,059,241.53 − 10,762,394,649.32）÷ 10,762,394,649.32 × 100% = -47.3067%"
+  },
+  "verification": {
+    "raw_amounts_cross_checked": true,
+    "cross_check_detail": "search_notice 公告片段与 get_security_indicators 返回的 2026 年 1–9 月及 2025 年同期营业收入、归母净利润逐位一致；iFinD 列示同比 -36.5792%、-47.3067%，按原始金额复算一致，四舍五入两位为 -36.58%、-47.31%。",
+    "quote_internal_check": "最新价 80.51 元、市盈率TTM 20.6473203 倍来自同一次实时快照（2026-11-03 12:15:15）；与日频摘要的 20.4575 倍存在时点差异，卡面采用与最新价同一快照的实时值。",
+    "calc_script": "research/ifind-luzhou-2026q3/calc.py（python3 calc.py，全部断言通过）"
+  },
+  "limitations": [
+    "2026 年三季度报告未经审计。",
+    "iFinD 结构化接口与公告语义检索不返回公告原文页码/全文 URL；本稿只能定位到公告标题、报告期与接口字段，无法标注原文页码。",
+    "行情为 2026-11-03 12:15:15 午间休市快照，午后开盘后价格与市盈率TTM 可能变化。",
+    "iFinD 数据后续可能因财报更正或数据商调整而变化；以公司披露原文为准。",
+    "本稿仅为公开数据整理与晨会速览，不构成投资建议。"
+  ]
+}
