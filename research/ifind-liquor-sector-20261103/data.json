@@ -1,0 +1,332 @@
+{
+ "schema_version": "1.0",
+ "meta": {
+  "title": "申万白酒Ⅱ板块当日行情与近一周要闻（iFinD）",
+  "purpose": "按工单用同花顺 iFinD 查询 2026-11-03 白酒板块（申万）上午收盘行情、领涨/领跌个股，以及 2026-10-27 至 2026-11-03 的白酒行业要闻与公告，供人工复核。",
+  "prepared_at": "2026-11-03T12:22:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "market_data_time": "2026-11-03 11:30（上午收盘；午间休市，12:19–12:20 快照价格未变）",
+  "retrieval_window": "2026-11-03T12:19:15+08:00/2026-11-03T12:21:31+08:00",
+  "data_source": "同花顺 iFinD MCP（server: ifind）",
+  "currency": "CNY",
+  "rounding": "涨跌幅与成交额显示值四舍五入两位小数；原始值保留接口返回值；成交额亿元换算按 ÷100,000,000。",
+  "session_note": "当日 13:00 后另有下午交易时段，本底稿仅为上午收盘（半日）数据，不代表全天收盘。"
+ },
+ "sector": {
+  "name": "白酒Ⅱ",
+  "shenwan_path": "内地股票->申银万国行业类->食品饮料->白酒Ⅱ",
+  "code": "801125.SL",
+  "last": "39779.84",
+  "change_pct_raw": "1.1067651576247517",
+  "change_pct": 1.1068,
+  "amount_cny_raw": "12686964200",
+  "amount_yi": 126.869642,
+  "volume_raw": "2440306",
+  "volume_unit": "接口未标注单位",
+  "rise_count": 17,
+  "fall_count": 2,
+  "quote_time": "2026-11-03 12:20:00",
+  "last_bar_1130": "2026-11-03 11:30 收盘价 39779.84（15 分钟高频序列末根）",
+  "constituent_count": 19
+ },
+ "leaders": {
+  "top_gainer": {
+   "code": "000995.SZ",
+   "name": "皇台酒业",
+   "last": "17.16",
+   "change_pct_raw": "10.000000000000004",
+   "change_pct": 10.0,
+   "amount_cny_raw": "44325996",
+   "amount_yi": 0.4433,
+   "volume_raw": "25831",
+   "quote_time": "2026-11-03 12:19:39"
+  },
+  "top_loser": {
+   "code": "603198.SH",
+   "name": "迎驾贡酒",
+   "last": "46.09",
+   "change_pct_raw": "-5.027817844632181",
+   "change_pct": -5.0278,
+   "amount_cny_raw": "527448920.87",
+   "amount_yi": 5.2745,
+   "volume_raw": "113278",
+   "quote_time": "2026-11-03 12:19:36"
+  }
+ },
+ "constituents": [
+  {
+   "code": "000995.SZ",
+   "name": "皇台酒业",
+   "last": "17.16",
+   "change_pct_raw": "10.000000000000004",
+   "change_pct": 10.0,
+   "amount_cny_raw": "44325996",
+   "amount_yi": 0.44326,
+   "volume_raw": "25831",
+   "quote_time": "2026-11-03 12:19:39"
+  },
+  {
+   "code": "600779.SH",
+   "name": "水井坊",
+   "last": "28.86",
+   "change_pct_raw": "2.6315789473684155",
+   "change_pct": 2.6316,
+   "amount_cny_raw": "432665511.93",
+   "amount_yi": 4.326655,
+   "volume_raw": "147667",
+   "quote_time": "2026-11-03 12:19:42"
+  },
+  {
+   "code": "002646.SZ",
+   "name": "天佑德酒",
+   "last": "7.08",
+   "change_pct_raw": "2.460202604920404",
+   "change_pct": 2.4602,
+   "amount_cny_raw": "60743958",
+   "amount_yi": 0.60744,
+   "volume_raw": "85995",
+   "quote_time": "2026-11-03 12:19:57"
+  },
+  {
+   "code": "600559.SH",
+   "name": "老白干酒",
+   "last": "12.04",
+   "change_pct_raw": "2.3809523809523756",
+   "change_pct": 2.381,
+   "amount_cny_raw": "360435538.16",
+   "amount_yi": 3.604355,
+   "volume_raw": "298297",
+   "quote_time": "2026-11-03 12:19:36"
+  },
+  {
+   "code": "600519.SH",
+   "name": "贵州茅台",
+   "last": "1457.66",
+   "change_pct_raw": "1.2896949482315456",
+   "change_pct": 1.2897,
+   "amount_cny_raw": "5122686354.73",
+   "amount_yi": 51.226864,
+   "volume_raw": "35380",
+   "quote_time": "2026-11-03 12:19:53"
+  },
+  {
+   "code": "000858.SZ",
+   "name": "五粮液",
+   "last": "75.17",
+   "change_pct_raw": "1.2390572390572414",
+   "change_pct": 1.2391,
+   "amount_cny_raw": "1413271698.44",
+   "amount_yi": 14.132717,
+   "volume_raw": "189320",
+   "quote_time": "2026-11-03 12:19:48"
+  },
+  {
+   "code": "000799.SZ",
+   "name": "酒鬼酒",
+   "last": "35.7",
+   "change_pct_raw": "1.161802210257874",
+   "change_pct": 1.1618,
+   "amount_cny_raw": "235731361.04",
+   "amount_yi": 2.357314,
+   "volume_raw": "65812",
+   "quote_time": "2026-11-03 12:19:33"
+  },
+  {
+   "code": "002304.SZ",
+   "name": "洋河股份",
+   "last": "38.26",
+   "change_pct_raw": "1.0031678986272319",
+   "change_pct": 1.0032,
+   "amount_cny_raw": "371138432.72",
+   "amount_yi": 3.711384,
+   "volume_raw": "96699",
+   "quote_time": "2026-11-03 12:19:42"
+  },
+  {
+   "code": "600197.SH",
+   "name": "伊力特",
+   "last": "9.54",
+   "change_pct_raw": "0.9523809523809509",
+   "change_pct": 0.9524,
+   "amount_cny_raw": "60507334.4",
+   "amount_yi": 0.605073,
+   "volume_raw": "63418",
+   "quote_time": "2026-11-03 12:19:54"
+  },
+  {
+   "code": "000568.SZ",
+   "name": "泸州老窖",
+   "last": "80.51",
+   "change_pct_raw": "0.9276670427479117",
+   "change_pct": 0.9277,
+   "amount_cny_raw": "1037498377.53",
+   "amount_yi": 10.374984,
+   "volume_raw": "129032",
+   "quote_time": "2026-11-03 12:19:15"
+  },
+  {
+   "code": "603919.SH",
+   "name": "金徽酒",
+   "last": "16.88",
+   "change_pct_raw": "0.8363201911589043",
+   "change_pct": 0.8363,
+   "amount_cny_raw": "148235166.48",
+   "amount_yi": 1.482352,
+   "volume_raw": "87658",
+   "quote_time": "2026-11-03 12:19:43"
+  },
+  {
+   "code": "000596.SZ",
+   "name": "古井贡酒",
+   "last": "104.36",
+   "change_pct_raw": "0.5394990366088653",
+   "change_pct": 0.5395,
+   "amount_cny_raw": "586571530.5",
+   "amount_yi": 5.865715,
+   "volume_raw": "55877",
+   "quote_time": "2026-11-03 12:19:30"
+  },
+  {
+   "code": "600702.SH",
+   "name": "舍得酒业",
+   "last": "34.16",
+   "change_pct_raw": "0.47058823529410765",
+   "change_pct": 0.4706,
+   "amount_cny_raw": "228873955.99",
+   "amount_yi": 2.28874,
+   "volume_raw": "66661",
+   "quote_time": "2026-11-03 12:19:44"
+  },
+  {
+   "code": "603369.SH",
+   "name": "今世缘",
+   "last": "34.84",
+   "change_pct_raw": "0.2301495972382204",
+   "change_pct": 0.2301,
+   "amount_cny_raw": "423428261.44",
+   "amount_yi": 4.234283,
+   "volume_raw": "120798",
+   "quote_time": "2026-11-03 12:19:55"
+  },
+  {
+   "code": "600199.SH",
+   "name": "金种子酒",
+   "last": "7.73",
+   "change_pct_raw": "0.12953367875648542",
+   "change_pct": 0.1295,
+   "amount_cny_raw": "424551111.71",
+   "amount_yi": 4.245511,
+   "volume_raw": "542601",
+   "quote_time": "2026-11-03 12:19:57"
+  },
+  {
+   "code": "600809.SH",
+   "name": "山西汾酒",
+   "last": "131.09",
+   "change_pct_raw": "0.10691103474609759",
+   "change_pct": 0.1069,
+   "amount_cny_raw": "839727154.41",
+   "amount_yi": 8.397272,
+   "volume_raw": "63924",
+   "quote_time": "2026-11-03 12:19:51"
+  },
+  {
+   "code": "603589.SH",
+   "name": "口子窖",
+   "last": "18.73",
+   "change_pct_raw": "0.05341880341881177",
+   "change_pct": 0.0534,
+   "amount_cny_raw": "170423278.89",
+   "amount_yi": 1.704233,
+   "volume_raw": "90492",
+   "quote_time": "2026-11-03 12:19:33"
+  },
+  {
+   "code": "000860.SZ",
+   "name": "顺鑫农业",
+   "last": "12.22",
+   "change_pct_raw": "-0.48859934853419157",
+   "change_pct": -0.4886,
+   "amount_cny_raw": "198700244.11",
+   "amount_yi": 1.987002,
+   "volume_raw": "161559",
+   "quote_time": "2026-11-03 12:19:18"
+  },
+  {
+   "code": "603198.SH",
+   "name": "迎驾贡酒",
+   "last": "46.09",
+   "change_pct_raw": "-5.027817844632181",
+   "change_pct": -5.0278,
+   "amount_cny_raw": "527448920.87",
+   "amount_yi": 5.274489,
+   "volume_raw": "113278",
+   "quote_time": "2026-11-03 12:19:36"
+  }
+ ],
+ "checks": {
+  "constituent_amount_sum_cny_raw": "12686964187.35",
+  "sector_amount_cny_raw": "12686964200",
+  "amount_diff_cny": "12.65",
+  "amount_diff_pct": 9.970864424761284e-08,
+  "constituent_up": 17,
+  "constituent_down": 2,
+  "constituent_flat": 0,
+  "rise_count_match": true,
+  "intraday_bar_amount_sum_check": "15 分钟 bar 成交额合计 12,686,964,200 元，与板块实时快照一致"
+ },
+ "news": [
+  {
+   "rank": 1,
+   "kind": "公告",
+   "title": "泸州老窖：2026年三季度报告",
+   "date": "2026-10-30",
+   "source": "泸州老窖公告（iFinD search_notice 检索）",
+   "url": null,
+   "key_facts": "2026Q3 归母净利润 1,331,795,155.20 元，同比 -57.03%；2026 年前三季度归母净利润 5,671,059,241.53 元，同比 -47.31%。",
+   "snippet_note": "iFinD 公告检索返回标题、日期与片段，不返回公告原文 URL 或页码。"
+  },
+  {
+   "rank": 2,
+   "kind": "行业新闻",
+   "title": "库存出清持续推进 白酒行业进入磨底期",
+   "date": "2026-11-03",
+   "source": "证券日报（东方财富网转载）",
+   "url": "https://wap.eastmoney.com/a/202611033919177757.html",
+   "key_facts": "三季报落地后多家酒企营收逐步企稳；中信证券称行业处于磨底后期、库存出清尾声；国金证券称价盘基本筑底、渠道去库进入收尾；机构预计 2027 年盈利修复，但强调并非终端消费实质性反转。"
+  },
+  {
+   "rank": 3,
+   "kind": "行业新闻",
+   "title": "白酒板块逆市走强 19个交易日上涨近15%",
+   "date": "2026-11-03",
+   "source": "凤凰网财经",
+   "url": "https://finance.ifeng.com/c/8xk5Xp2vMks",
+   "key_facts": "白酒板块 19 个交易日上涨近 15%；河南、山东、广东、安徽多地酒商库存同比下降约 10%–20%，部分终端库存压缩至 1–2 个月；飞天茅台批价 1700–1750 元、普五 750–800 元、国窖1573 820–850 元；高盛预计 2026Q3 为行业盈利低谷。"
+  }
+ ],
+ "news_selection": {
+  "window": "2026-10-27 至 2026-11-03（含）",
+  "criteria": "硬信息（公告/业绩）优先，其次行业层面影响与时效性；同题重复报道只保留 1 条。",
+  "not_selected": [
+   {
+    "title": "茅台重回1400，白酒的底已现？",
+    "date": "2026-11-02",
+    "source": "新浪财经（网易财经同题转载）",
+    "reason": "观点评论，核心信息与已选 3 条重叠"
+   },
+   {
+    "title": "大跌之后，白酒现在是A股最好的资产？",
+    "date": "2026-10-28",
+    "source": "腾讯新闻",
+    "reason": "观点评论，信息与已选行业稿重叠"
+   },
+   {
+    "title": "白酒批价旺季后回落，3Q26业绩分化",
+    "date": "2026-10-28",
+    "source": "哔哩哔哩（自媒体视频）",
+    "reason": "非权威一手来源，未采用"
+   }
+  ]
+ }
+}
